@@ -34,4 +34,12 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/blog/"/>
   </url>
 
+  <url>
+    <loc>https://www.scorio.nl/blog/seo-gids-mkb-ondernemers-2026.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/blog/seo-gids-mkb-ondernemers-2026.html"/>
+  </url>
+
 </urlset>
