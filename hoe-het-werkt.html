@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hoe het werkt | SEO Scan in 3 stappen | Scorio.nl</title>
+  <meta name="description" content="Hoe werkt de Scorio SEO scan? In 3 simpele stappen van URL naar volledig rapport. Geen technische kennis nodig. Gratis proberen." />
+  <link rel="canonical" href="https://www.scorio.nl/hoe-het-werkt.html" />
+  <link rel="alternate" hreflang="nl" href="https://www.scorio.nl/hoe-het-werkt.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hoe het werkt | Scorio.nl — SEO Scan in 60 seconden" />
+  <meta property="og:description" content="In 3 stappen van URL naar volledig SEO rapport. Geen technische kennis nodig. Gratis proberen." />
+  <meta property="og:url" content="https://www.scorio.nl/hoe-het-werkt.html" />
+  <meta property="og:site_name" content="Scorio.nl" />
+  <meta property="og:locale" content="nl_NL" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235B4FE8'/><text x='16' y='22' text-anchor='middle' font-size='16' font-weight='900' fill='white' font-family='sans-serif'>S</text></svg>" />
+
+  <style>
+    .hiw-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .hiw-detail:last-of-type { border-bottom: none; }
+    .hiw-detail.reverse .hiw-detail-visual { order: -1; }
+
+    .hiw-step-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .hiw-step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(91,79,232,0.4);
+      flex-shrink: 0;
+    }
+
+    .hiw-step-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary-light);
+    }
+
+    .hiw-detail h2 { margin-bottom: 16px; }
+    .hiw-detail p { margin-bottom: 20px; }
+
+    .hiw-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .hiw-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .hiw-detail-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hiw-visual-card {
+      background: rgba(22, 22, 42, 0.7);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      width: 100%;
+      max-width: 360px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hiw-visual-url-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      margin-bottom: 20px;
+    }
+
+    .url-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .url-dot.red { background: #ef4444; }
+    .url-dot.yellow { background: #f59e0b; }
+    .url-dot.green { background: var(--accent); }
+
+    .url-text {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-family: monospace;
+    }
+
+    .hiw-visual-progress {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .progress-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--text);
+    }
+
+    .progress-bar-wrap {
+      flex: 1;
+      height: 6px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 100px;
+      background: var(--accent);
+    }
+
+    .progress-pct {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--muted);
+      min-width: 28px;
+      text-align: right;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .category-chip {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text);
+    }
+
+    .report-preview-mini {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+    }
+
+    .report-header-mini {
+      background: var(--primary);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .report-logo-mini {
+      font-size: 0.8rem;
+      font-weight: 900;
+      color: #fff;
+      font-family: var(--font-heading);
+      letter-spacing: -0.03em;
+    }
+
+    .report-score-mini {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    .report-body-mini {
+      padding: 16px;
+      background: #f8f8fc;
+    }
+
+    .report-row-mini {
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+      border-radius: 4px;
+      padding: 7px 10px;
+      margin-bottom: 6px;
+      font-size: 0.65rem;
+    }
+
+    .report-row-label { color: #333; font-weight: 600; }
+    .status-good { color: #16a34a; font-weight: 700; }
+    .status-warn { color: #d97706; font-weight: 700; }
+    .status-bad { color: #dc2626; font-weight: 700; }
+
+    @media (max-width: 768px) {
+      .hiw-detail {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 56px 0;
+      }
+      .hiw-detail.reverse .hiw-detail-visual { order: 0; }
+      .category-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Scorio<span class="logo-dot"></span></a>
+        <nav class="nav-links" role="navigation" aria-label="Hoofdmenu">
+          <a href="hoe-het-werkt.html" class="active">Hoe het werkt</a>
+          <a href="prijzen.html">Prijzen</a>
+          <a href="blog/">Blog</a>
+        </nav>
+        <div class="header-actions">
+          <a href="#" class="btn btn-ghost btn-sm">Inloggen</a>
+          <a href="index.html#hero-form" class="btn btn-accent btn-sm">Gratis scannen</a>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Menu openen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <button class="mobile-close-btn" aria-label="Menu sluiten">✕</button>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-label" style="margin: 0 auto 16px;">Hoe het werkt</span>
+        <h1>Van URL naar rapport<br />in 60 seconden</h1>
+        <p>Geen installatie, geen account, geen technische kennis nodig. Gewoon jouw website-adres invullen en wij doen de rest.</p>
+        <div style="margin-top: 32px;">
+          <a href="index.html#hero-form" class="btn btn-accent btn-lg">Nu proberen — gratis →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step Details -->
+    <section style="padding: 0 0 var(--section-gap);">
+      <div class="container">
+
+        <!-- Stap 1 -->
+        <div class="hiw-detail">
+          <div class="hiw-detail-content fade-up">
+            <div class="hiw-step-label">
+              <div class="hiw-step-num">1</div>
+              <span class="hiw-step-name">Stap 1</span>
+            </div>
+            <h2>Vul jouw website-adres in</h2>
+            <p>Plak de URL van jouw website in het invoerveld op de homepage. Dat is alles. Je hoeft geen account te maken of je e-mailadres achter te laten voor de gratis scan.</p>
+
+            <ul class="hiw-checklist">
+              <li>
+                <span class="check-icon">✓</span>
+                Werkt met elke website — WordPress, Shopify, Squarespace, maatwerkwebsites
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                Geen plug-ins of code-aanpassingen nodig
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                Veilig — wij lezen alleen de publieke informatie van jouw website
+              </li>
+            </ul>
+          </div>
+
+          <div class="hiw-detail-visual fade-up stagger-2">
+            <div class="hiw-visual-card">
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 16px;">Jouw website adres</div>
+              <div class="hiw-visual-url-bar">
+                <div class="url-dot red"></div>
+                <div class="url-dot yellow"></div>
+                <div class="url-dot green"></div>
+                <span class="url-text">https://jouwwebsite.nl</span>
+              </div>
+              <button style="width: 100%; background: var(--accent); color: var(--dark); border: none; border-radius: var(--radius); padding: 14px; font-family: var(--font-body); font-size: 0.9rem; font-weight: 700; cursor: pointer; box-shadow: 0 8px 24px rgba(0,200,150,0.3);">
+                Gratis scannen →
+              </button>
+              <p style="font-size: 0.75rem; color: var(--muted); text-align: center; margin-top: 12px;">Geen account nodig · AVG-compliant</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stap 2 -->
+        <div class="hiw-detail reverse">
+          <div class="hiw-detail-content fade-up">
+            <div class="hiw-step-label">
+              <div class="hiw-step-num">2</div>
+              <span class="hiw-step-name">Stap 2</span>
+            </div>
+            <h2>Wij scannen jouw website</h2>
+            <p>Zodra je op "Gratis scannen" klikt, gaan onze servers aan de slag. In gemiddeld 30 tot 60 seconden analyseren we jouw website op alle relevante SEO-factoren.</p>
+
+            <ul class="hiw-checklist">
+              <li>
+                <span class="check-icon">✓</span>
+                <strong>Snelheid</strong> — laadtijd, Core Web Vitals, caching
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <strong>On-page SEO</strong> — titels, meta descriptions, koppen, afbeeldingen
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <strong>Mobielvriendelijkheid</strong> — responsive design, touch targets
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <strong>Technisch</strong> — HTTPS, 404's, omleidingen, robots.txt
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <strong>Links</strong> — interne structuur, gebroken links
+              </li>
+            </ul>
+          </div>
+
+          <div class="hiw-detail-visual fade-up stagger-2">
+            <div class="hiw-visual-card">
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 16px;">Bezig met analyseren…</div>
+
+              <div class="hiw-visual-progress">
+                <div class="progress-item">
+                  <span style="font-size: 0.85rem;">⚡</span>
+                  <span style="min-width: 80px; font-size: 0.78rem;">Snelheid</span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill" style="width: 87%;"></div>
+                  </div>
+                  <span class="progress-pct">87</span>
+                </div>
+                <div class="progress-item">
+                  <span style="font-size: 0.85rem;">🔍</span>
+                  <span style="min-width: 80px; font-size: 0.78rem;">SEO</span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill" style="width: 64%; background: #F59E0B;"></div>
+                  </div>
+                  <span class="progress-pct">64</span>
+                </div>
+                <div class="progress-item">
+                  <span style="font-size: 0.85rem;">📱</span>
+                  <span style="min-width: 80px; font-size: 0.78rem;">Mobiel</span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill" style="width: 91%;"></div>
+                  </div>
+                  <span class="progress-pct">91</span>
+                </div>
+                <div class="progress-item">
+                  <span style="font-size: 0.85rem;">🛡️</span>
+                  <span style="min-width: 80px; font-size: 0.78rem;">Technisch</span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill" style="width: 72%; background: #F59E0B;"></div>
+                  </div>
+                  <span class="progress-pct">72</span>
+                </div>
+                <div class="progress-item">
+                  <span style="font-size: 0.85rem;">🔗</span>
+                  <span style="min-width: 80px; font-size: 0.78rem;">Links</span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill" style="width: 80%;"></div>
+                  </div>
+                  <span class="progress-pct">80</span>
+                </div>
+              </div>
+
+              <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 8px;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); animation: pulse-dot 2s infinite;"></div>
+                <span style="font-size: 0.78rem; color: var(--muted);">Analyseren… 45%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stap 3 -->
+        <div class="hiw-detail">
+          <div class="hiw-detail-content fade-up">
+            <div class="hiw-step-label">
+              <div class="hiw-step-num">3</div>
+              <span class="hiw-step-name">Stap 3</span>
+            </div>
+            <h2>Jouw rapport is klaar</h2>
+            <p>Na de scan ontvang je een overzichtelijk rapport met jouw totaalscore en concrete verbeterpunten — gesorteerd op impact. Met een betaald abonnement ontvang je ook een volledig PDF rapport in je mailbox.</p>
+
+            <ul class="hiw-checklist">
+              <li>
+                <span class="check-icon">✓</span>
+                Totaalscore van 0–100 met kleurcodering (groen/oranje/rood)
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                Top 3 verbeterpunten met directe actiestappen
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                PDF rapport in je mailbox (Starter en hoger)
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                Deelbaar met je webdeveloper of bureau
+              </li>
+            </ul>
+
+            <a href="index.html#hero-form" class="btn btn-accent">Start je eerste scan →</a>
+          </div>
+
+          <div class="hiw-detail-visual fade-up stagger-2">
+            <div class="report-preview-mini" style="width: 100%; max-width: 320px;">
+              <div class="report-header-mini">
+                <span class="report-logo-mini">Scorio.nl</span>
+                <span class="report-score-mini">Score: 74/100</span>
+              </div>
+              <div class="report-body-mini">
+                <div class="report-row-mini">
+                  <span class="report-row-label">HTTPS beveiliging</span>
+                  <span class="status-good">✓ Goed</span>
+                </div>
+                <div class="report-row-mini">
+                  <span class="report-row-label">Meta beschrijving</span>
+                  <span class="status-warn">⚠ Te kort</span>
+                </div>
+                <div class="report-row-mini">
+                  <span class="report-row-label">Alt-tekst afbeeldingen</span>
+                  <span class="status-bad">✗ Ontbreekt</span>
+                </div>
+                <div class="report-row-mini">
+                  <span class="report-row-label">Mobielvriendelijk</span>
+                  <span class="status-good">✓ Goed</span>
+                </div>
+                <div class="report-row-mini">
+                  <span class="report-row-label">Paginatitel aanwezig</span>
+                  <span class="status-good">✓ Goed</span>
+                </div>
+                <div style="background: #fff; border-radius: 4px; padding: 10px; margin-top: 6px;">
+                  <div style="font-size: 0.65rem; font-weight: 700; color: #333; margin-bottom: 8px;">🎯 Top prioriteiten</div>
+                  <div style="font-size: 0.6rem; color: #dc2626; margin-bottom: 4px;">1. Voeg alt-tekst toe aan 12 afbeeldingen</div>
+                  <div style="font-size: 0.6rem; color: #d97706; margin-bottom: 4px;">2. Verleng meta beschrijving naar 150 tekens</div>
+                  <div style="font-size: 0.6rem; color: #d97706;">3. Verbeter laadtijd mobiel (nu 4.2s)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- What we scan -->
+    <section style="padding: 0 0 var(--section-gap);">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">Categorieën</span>
+          <h2 class="section-heading">Wat analyseren wij?</h2>
+          <p class="section-sub">Scorio controleert meer dan 80 SEO-factoren in 5 categorieën.</p>
+        </div>
+
+        <div class="features-grid" style="margin-top: 48px;">
+          <div class="feature-card fade-up stagger-1">
+            <div class="feature-icon">⚡</div>
+            <h3>Snelheid &amp; Core Web Vitals</h3>
+            <p>Laadtijd, LCP, CLS, FID, Time to First Byte, server response, afbeeldingsoptimalisatie, caching en compressie.</p>
+          </div>
+          <div class="feature-card fade-up stagger-2">
+            <div class="feature-icon">🔍</div>
+            <h3>On-page SEO</h3>
+            <p>H1/H2/H3 structuur, paginatitel, meta description, URL-structuur, sleutelwoord dichtheid, interne links.</p>
+          </div>
+          <div class="feature-card fade-up stagger-3">
+            <div class="feature-icon">📱</div>
+            <h3>Mobielvriendelijkheid</h3>
+            <p>Responsive design, viewport configuratie, touch target grootte, tekstgrootte, horizontaal scrollen.</p>
+          </div>
+          <div class="feature-card fade-up stagger-4">
+            <div class="feature-icon">🛡️</div>
+            <h3>Technische SEO</h3>
+            <p>HTTPS/SSL, 404-pagina's, omleidingsketens, robots.txt, sitemap.xml, canonical tags, structured data.</p>
+          </div>
+          <div class="feature-card fade-up stagger-5">
+            <div class="feature-icon">🔗</div>
+            <h3>Links &amp; structuur</h3>
+            <p>Gebroken interne en externe links, anker teksten, sitestructuur diepte, breadcrumbs.</p>
+          </div>
+          <div class="feature-card fade-up stagger-6">
+            <div class="feature-icon">📋</div>
+            <h3>Actielijst</h3>
+            <p>Alle bevindingen samengevat in een geprioriteerde to-do lijst, gesorteerd op impact (hoog/middel/laag).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-banner-inner fade-up">
+          <h2>Klaar om jouw website te verbeteren?</h2>
+          <p>Scan nu gratis en ontdek wat je kunt doen om hoger te scoren in Google.</p>
+          <div style="margin-top: 32px;">
+            <a href="index.html#hero-form" class="btn btn-accent btn-lg">Gratis scannen →</a>
+          </div>
+          <p class="cta-note" style="margin-top: 16px;">Geen account nodig · 100% gratis · 60 seconden</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">Scorio<span class="logo-dot"></span></a>
+          <p class="footer-tagline">De slimste SEO scan tool voor Nederlandse ondernemers.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter / X">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="hoe-het-werkt.html">Hoe het werkt</a></li>
+            <li><a href="prijzen.html">Prijzen</a></li>
+            <li><a href="index.html#hero-form">Gratis scan</a></li>
+            <li><a href="#">API</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Bedrijf</h4>
+          <ul>
+            <li><a href="#">Over ons</a></li>
+            <li><a href="blog/">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Affiliate programma</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacybeleid</a></li>
+            <li><a href="#">Algemene voorwaarden</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">AVG</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Scorio.nl — KVK: 12345678 — Gemaakt in Nederland 🇳🇱</p>
+        <div class="footer-payment">
+          <div class="footer-pay-badge">
+            <svg width="24" height="16" viewBox="0 0 40 26" fill="none" aria-hidden="true"><rect width="40" height="26" rx="4" fill="#CC0066"/><text x="20" y="17" text-anchor="middle" font-size="9" font-weight="900" fill="white" font-family="sans-serif">iDEAL</text></svg>
+            iDEAL
+          </div>
+          <div class="footer-pay-badge">
+            <svg width="24" height="16" viewBox="0 0 40 26" fill="none" aria-hidden="true"><rect width="40" height="26" rx="4" fill="#635BFF"/><text x="20" y="17" text-anchor="middle" font-size="9" font-weight="900" fill="white" font-family="sans-serif">stripe</text></svg>
+            Stripe
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
