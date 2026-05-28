@@ -3082,3 +3082,348 @@ p { color: var(--muted); line-height: 1.7; }
   }
 }
 
+/* ============================================================
+   Blog Index — Stats Grid
+   ============================================================ */
+
+.blog-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.blog-stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.blog-stat-card .blog-stat-num {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.blog-stat-card .blog-stat-lbl {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* ============================================================
+   Blog Index — Popular Questions Accordion
+   ============================================================ */
+
+.pq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.pq-accordion-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.pq-accordion-item.active {
+  background: var(--card);
+  border-color: rgba(91, 79, 232, 0.35);
+}
+
+.pq-accordion-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.pq-accordion-question:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.pq-accordion-question .pq-icon {
+  flex-shrink: 0;
+  font-size: 1.15rem;
+}
+
+.pq-accordion-question .pq-q-text {
+  flex: 1;
+}
+
+.pq-chevron {
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.pq-accordion-item.active .pq-chevron {
+  transform: rotate(180deg);
+}
+
+.pq-accordion-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.pq-accordion-answer-inner {
+  padding: 4px 20px 20px 48px;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: rgba(232, 232, 240, 0.7);
+}
+
+.pq-accordion-answer-inner a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.pq-accordion-answer-inner a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Blog Index — Featured Article Card
+   ============================================================ */
+
+.featured-article-card {
+  display: block;
+  position: relative;
+  background: linear-gradient(135deg, var(--primary) 0%, #3B2FCC 100%);
+  border-radius: 20px;
+  padding: 52px 56px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 64px rgba(91, 79, 232, 0.45);
+}
+
+.featured-article-deco {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 148px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.06);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -4px;
+  font-family: var(--font-heading);
+}
+
+.featured-article-content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.featured-article-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.featured-article-content h2 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.featured-article-content p {
+  font-size: 0.925rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+.featured-article-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================================
+   Blog Index — Card Category Banner
+   ============================================================ */
+
+.blog-cat-banner {
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-cat-emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.blog-cat-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.blog-cat-time {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.blog-cat-banner--speed {
+  background: linear-gradient(135deg, #f97316 0%, #c2410c 100%);
+}
+
+.blog-cat-banner--technisch {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+}
+
+.blog-cat-banner--beginners {
+  background: linear-gradient(135deg, var(--accent) 0%, #007A56 100%);
+}
+
+.blog-cat-banner--geo {
+  background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+}
+
+.blog-cat-banner--lokaal {
+  background: linear-gradient(135deg, #059669 0%, #065f46 100%);
+}
+
+.blog-cat-banner--tools {
+  background: linear-gradient(135deg, #d97706 0%, #92400e 100%);
+}
+
+.blog-card-date {
+  font-size: 0.775rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+/* ============================================================
+   Blog Index — Category Filter Bar
+   ============================================================ */
+
+.cat-filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cat-filter-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.cat-filter-btn {
+  padding: 8px 18px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  font-family: var(--font-body);
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.cat-filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+.cat-filter-btn.active {
+  background: var(--accent);
+  color: #0D0D1A;
+  border-color: transparent;
+}
+
+/* ============================================================
+   Blog Index — Responsive
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .blog-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-article-card {
+    padding: 32px 28px;
+  }
+
+  .featured-article-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .featured-article-deco {
+    font-size: 100px;
+    opacity: 0.5;
+  }
+
+  .pq-accordion-answer-inner {
+    padding-left: 20px;
+  }
+}
+

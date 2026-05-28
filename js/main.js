@@ -324,4 +324,57 @@
     }
   });
 
+  /* ----------------------------------------------------------
+     Popular Questions Accordion (blog index)
+  ---------------------------------------------------------- */
+  document.querySelectorAll('.pq-accordion-item').forEach(item => {
+    const question = item.querySelector('.pq-accordion-question');
+    const answer = item.querySelector('.pq-accordion-answer');
+
+    if (!question || !answer) return;
+
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      document.querySelectorAll('.pq-accordion-item').forEach(other => {
+        other.classList.remove('active');
+        const otherAnswer = other.querySelector('.pq-accordion-answer');
+        if (otherAnswer) otherAnswer.style.maxHeight = null;
+        const otherBtn = other.querySelector('.pq-accordion-question');
+        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* ----------------------------------------------------------
+     Blog Category Filter
+  ---------------------------------------------------------- */
+  const catFilterBtns = document.querySelectorAll('.cat-filter-btn');
+  const catBlogCards = document.querySelectorAll('.blog-card[data-category]');
+
+  if (catFilterBtns.length) {
+    catFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        catFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        catBlogCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
 })();
