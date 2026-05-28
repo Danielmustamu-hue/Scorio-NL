@@ -121,6 +121,28 @@
 </head>
 <body>
 
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie melding">
+    <div class="cookie-banner-inner">
+      <p class="cookie-text"><span aria-hidden="true">🍪</span> Scorio gebruikt cookies voor analytics en een betere ervaring. <a href="/cookies/" class="cookie-link">Lees ons cookiebeleid.</a></p>
+      <div class="cookie-actions">
+        <button class="btn btn-ghost btn-sm" id="cookie-minimal">Alleen noodzakelijk</button>
+        <button class="btn btn-accent btn-sm" id="cookie-accept">Alles accepteren</button>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var b=document.getElementById('cookie-banner');
+    if(!b)return;
+    var c=localStorage.getItem('cookie_consent');
+    if(c){document.body.classList.add(c==='all'?'cookies-accepted':'cookies-minimal');b.style.display='none';return;}
+    b.style.display='';
+    document.getElementById('cookie-accept').addEventListener('click',function(){localStorage.setItem('cookie_consent','all');document.body.classList.add('cookies-accepted');b.style.display='none';});
+    document.getElementById('cookie-minimal').addEventListener('click',function(){localStorage.setItem('cookie_consent','minimal');document.body.classList.add('cookies-minimal');b.style.display='none';});
+  })();
+  </script>
+
   <!-- Reading progress bar -->
   <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
 
@@ -808,7 +830,7 @@
 
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+    <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -826,33 +848,33 @@
         <div class="footer-col">
           <h4>Product</h4>
           <ul>
-            <li><a href="/hoe-het-werkt.html">Hoe het werkt</a></li>
-            <li><a href="/prijzen.html">Prijzen</a></li>
-            <li><a href="/#hero-form">Gratis scan</a></li>
-            <li><a href="#">API</a></li>
+            <li><a href="/#hoe-het-werkt">Hoe het werkt</a></li>
+            <li><a href="/#prijzen">Prijzen</a></li>
+            <li><a href="/">Gratis scan</a></li>
+            <li><a href="/api/">API</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Bedrijf</h4>
           <ul>
-            <li><a href="#">Over ons</a></li>
+            <li><a href="/over-ons/">Over ons</a></li>
             <li><a href="/blog/">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Affiliate programma</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/affiliate/">Affiliate programma</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
           <ul>
-            <li><a href="#">Privacybeleid</a></li>
-            <li><a href="#">Algemene voorwaarden</a></li>
-            <li><a href="#">Cookies</a></li>
-            <li><a href="#">AVG</a></li>
+            <li><a href="/privacy/">Privacybeleid</a></li>
+            <li><a href="/voorwaarden/">Algemene voorwaarden</a></li>
+            <li><a href="/cookies/">Cookiebeleid</a></li>
+            <li><a href="/avg/">AVG</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copyright">&#xA9; 2026 Scorio.nl &#x2014; KVK: 12345678 &#x2014; Gemaakt in Nederland &#x1F1F3;&#x1F1F1;</p>
+        <p class="footer-copyright">© 2026 Scorio.nl — KVK: 12345678 — Gemaakt in Nederland 🇳🇱</p>
         <div class="footer-payment">
           <div class="footer-pay-badge">
             <svg width="24" height="16" viewBox="0 0 40 26" fill="none" aria-hidden="true"><rect width="40" height="26" rx="4" fill="#CC0066"/><text x="20" y="17" text-anchor="middle" font-size="9" font-weight="900" fill="white" font-family="sans-serif">iDEAL</text></svg>

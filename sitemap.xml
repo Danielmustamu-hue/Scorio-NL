@@ -195,4 +195,64 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-installateur/"/>
   </url>
 
+  <!-- Bedrijfspagina's -->
+  <url>
+    <loc>https://www.scorio.nl/over-ons/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/over-ons/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/contact/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/contact/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/affiliate/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/affiliate/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/api/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/api/"/>
+  </url>
+
+  <!-- Legal pagina's -->
+  <url>
+    <loc>https://www.scorio.nl/privacy/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/privacy/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/voorwaarden/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/voorwaarden/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/cookies/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/cookies/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/avg/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/avg/"/>
+  </url>
+
 </urlset>
