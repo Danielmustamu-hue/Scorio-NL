@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTTPS en SSL-certificaat: waarom het cruciaal is voor je SEO | Scorio.nl</title>
+  <meta name="description" content="Zonder SSL-certificaat rankt Google je website lager én tonen browsers een veiligheidswaarschuwing. Lees hoe je HTTPS gratis instelt." />
+  <link rel="canonical" href="https://www.scorio.nl/blog/https-ssl-certificaat-seo.html" />
+  <link rel="alternate" hreflang="nl" href="https://www.scorio.nl/blog/https-ssl-certificaat-seo.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="HTTPS en SSL-certificaat: waarom het cruciaal is voor je SEO" />
+  <meta property="og:description" content="Zonder SSL-certificaat rankt Google je website lager én tonen browsers een veiligheidswaarschuwing. Lees hoe je HTTPS gratis instelt." />
+  <meta property="og:url" content="https://www.scorio.nl/blog/https-ssl-certificaat-seo.html" />
+  <meta property="og:site_name" content="Scorio.nl" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:image" content="https://www.scorio.nl/assets/og-https-ssl-seo.png" />
+  <meta property="article:published_time" content="2026-04-17T09:00:00+02:00" />
+  <meta property="article:modified_time" content="2026-04-17T09:00:00+02:00" />
+  <meta property="article:author" content="https://www.scorio.nl/over-ons" />
+  <meta property="article:section" content="Technisch" />
+  <meta property="article:tag" content="HTTPS" />
+  <meta property="article:tag" content="SSL" />
+  <meta property="article:tag" content="technische SEO" />
+  <meta property="article:tag" content="websitebeveiliging" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HTTPS en SSL-certificaat: waarom het cruciaal is voor je SEO" />
+  <meta name="twitter:description" content="Zonder SSL rankt Google je website lager. Leer hoe HTTPS werkt, waarom het je conversie verbetert en hoe je het gratis instelt via Let's Encrypt." />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://www.scorio.nl/blog/https-ssl-certificaat-seo.html#article",
+        "headline": "HTTPS en SSL-certificaat: waarom het cruciaal is voor je SEO",
+        "description": "Zonder SSL-certificaat rankt Google je website lager en tonen browsers een veiligheidswaarschuwing. Lees hoe HTTPS werkt, waarom het je conversie verbetert en hoe je het gratis instelt.",
+        "image": "https://www.scorio.nl/assets/og-https-ssl-seo.png",
+        "datePublished": "2026-04-17T09:00:00+02:00",
+        "dateModified": "2026-04-17T09:00:00+02:00",
+        "author": {
+          "@type": "Person",
+          "name": "Redactie Scorio.nl",
+          "url": "https://www.scorio.nl/over-ons"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Scorio.nl",
+          "url": "https://www.scorio.nl",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.scorio.nl/assets/scorio-logo.png"
+          }
+        },
+        "inLanguage": "nl",
+        "keywords": ["HTTPS", "SSL", "SSL-certificaat", "websitebeveiliging", "technische SEO", "Let's Encrypt", "mixed content"],
+        "articleSection": "Technisch",
+        "wordCount": 1400,
+        "timeRequired": "PT5M",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.scorio.nl/blog/https-ssl-certificaat-seo.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.scorio.nl/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.scorio.nl/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "HTTPS en SSL-certificaat: waarom het cruciaal is voor je SEO", "item": "https://www.scorio.nl/blog/https-ssl-certificaat-seo.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is een SSL-certificaat gratis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, een SSL-certificaat kan volledig gratis zijn. Let's Encrypt is een non-profit certificaatautoriteit die gratis SSL-certificaten uitgeeft die door alle grote browsers worden vertrouwd. De meeste Nederlandse hostingproviders (Antagonist, Transip, Siteground, Kinsta) activeren Let's Encrypt automatisch of met één klik vanuit het configuratiepaneel."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wat is het verschil tussen HTTP en HTTPS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "HTTP (HyperText Transfer Protocol) verstuurt data tussen browser en server in gewone tekst — leesbaar voor iedereen die het verkeer onderschept. HTTPS (HTTP Secure) versleutelt die verbinding via een SSL/TLS-certificaat. Bezoekers en hun gegevens zijn beschermd tegen afluisteren en manipulatie. Moderne browsers tonen een slotje bij HTTPS en een 'Niet veilig'-waarschuwing bij HTTP."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Heeft HTTPS directe invloed op mijn Google-ranking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Google bevestigde in 2014 dat HTTPS een directe rankingfactor is. In 2026 beschouwt Google een beveiligde verbinding als absolute minimumvereiste. Websites zonder HTTPS krijgen een lagere voorkeur in de zoekresultaten, en de 'Niet veilig'-waarschuwing in browsers verhoogt het bouncepercentage — wat indirect ook de ranking schaadt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wat is mixed content en hoe los ik het op?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mixed content ontstaat wanneer je HTTPS-pagina bronnen laadt via HTTP — denk aan afbeeldingen, scripts of CSS-bestanden met een http://-URL. Browsers blokkeren dit en tonen een waarschuwing. Los het op door alle interne links en bronnen te controleren op http:// en die te vervangen door https:// of relatieve URL's. WordPress-gebruikers kunnen de plug-in Really Simple SSL gebruiken die dit automatisch afhandelt."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "HTTPS instellen op je website",
+        "description": "Stap voor stap HTTPS activeren afhankelijk van je hostingomgeving.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Activeer SSL via je hostingpaneel",
+            "text": "Log in op het configuratiepaneel van je hostingprovider en zoek naar 'SSL', 'Let's Encrypt' of 'HTTPS'. Bij de meeste Nederlandse providers activeer je het met één klik."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Stel 301-redirects in",
+            "text": "Zorg dat alle http://-verkeer automatisch wordt doorgestuurd naar https://. Dit doe je via een .htaccess-regel of via je CMS-instellingen."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Los mixed content op",
+            "text": "Controleer of alle interne links en bronnen (afbeeldingen, scripts) de https://-variant gebruiken. WordPress-gebruikers gebruiken de plug-in Really Simple SSL."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Verifieer via SSL Labs",
+            "text": "Ga naar ssllabs.com/ssltest/ en voer je domeinnaam in. Een score van A of A+ bevestigt dat je SSL correct is geconfigureerd."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235B4FE8'/><text x='16' y='22' text-anchor='middle' font-size='16' font-weight='900' fill='white' font-family='sans-serif'>S</text></svg>" />
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Scorio<span class="logo-dot"></span></a>
+        <nav class="nav-links" role="navigation" aria-label="Hoofdmenu">
+          <a href="/hoe-het-werkt.html">Hoe het werkt</a>
+          <a href="/prijzen.html">Prijzen</a>
+          <a href="/blog/" class="active">Blog</a>
+        </nav>
+        <div class="header-actions">
+          <a href="#" class="btn btn-ghost btn-sm">Inloggen</a>
+          <a href="/#hero-form" class="btn btn-accent btn-sm">Gratis scannen</a>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Menu openen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <button class="mobile-close-btn" aria-label="Menu sluiten">&#x2715;</button>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Broodkruimelpad">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="/">Home</a></li>
+        <li><span class="breadcrumb-sep" aria-hidden="true">/</span></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><span class="breadcrumb-sep" aria-hidden="true">/</span></li>
+        <li aria-current="page">HTTPS en SSL voor SEO</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <div class="article-meta">
+          <span class="badge badge-primary">Technisch</span>
+          <span class="article-meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>
+            <time datetime="2026-04-17">17 apr 2026</time>
+          </span>
+          <span class="article-meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+            5 min lezen
+          </span>
+          <span class="article-meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
+            ~1.400 woorden
+          </span>
+        </div>
+
+        <h1>&#x1F6E1;&#xFE0F; HTTPS en SSL-certificaat: waarom het cruciaal is voor je SEO</h1>
+
+        <p class="article-intro">
+          Open je website en kijk naar de adresbalk van je browser. Begint het adres met <strong>https://</strong> en zie je een slotje? Dan ben je veilig. Begint het met <em>http://</em> zonder slotje? Dan toont Chrome en Firefox op dit moment aan elke bezoeker "Niet veilig" — en rankt Google je lager. In dit artikel lees je wat je eraan doet, en hoe je het gratis oplost.
+        </p>
+
+        <div class="article-author-row">
+          <div class="article-author-avatar" aria-hidden="true">SR</div>
+          <div>
+            <div class="article-author-name">Redactie Scorio.nl</div>
+            <div class="article-author-role">SEO-specialisten voor het Nederlandse MKB</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Layout: article + TOC sidebar -->
+      <div class="article-layout">
+
+        <!-- Main article -->
+        <article class="article-body prose" id="artikel-inhoud" style="max-width: 760px; margin: 0 auto; line-height: 1.7;">
+
+          <!-- INTRODUCTIE -->
+
+          <p>
+            Stel: iemand zoekt in Google naar "kapper Amsterdam" en klikt op jouw website. Voordat hij ook maar &#xE9;&#xE9;n letter van je paginatekst leest, ziet hij in de adresbalk van zijn browser: <em>"Niet veilig"</em>. Wat doet de gemiddelde bezoeker? Hij drukt op de terugknop en kiest een concurrent. Dat is de realiteit van een website zonder SSL-certificaat in 2026.
+          </p>
+
+          <p>
+            Maar het stopt niet bij de browsermelding. Google bevestigde al in 2014 dat HTTPS een directe rankingfactor is. In 2026 is een beveiligde verbinding zo fundamenteel dat Google het als absolute minimumvereiste beschouwt. Websites zonder HTTPS worden consequent lager gerankt — ook al is alle andere SEO perfect op orde.
+          </p>
+
+          <div class="callout warning">
+            <span class="callout-icon">&#x26A0;&#xFE0F;</span>
+            <div class="callout-body">
+              <div class="callout-title">Weet je niet zeker of je website HTTPS heeft?</div>
+              <p class="callout-text">Doe een gratis <a href="/#hero-form" style="color: var(--primary-light);">Scorio.nl scan</a> van je website. Je ziet direct of HTTPS correct is ingesteld, of er mixed content-problemen zijn en welke andere technische issues je SEO blokkeren.</p>
+            </div>
+          </div>
+
+          <!-- SECTIE 1: WAT IS HTTPS -->
+
+          <h2 id="wat-is-https">1. Wat is HTTPS en hoe werkt SSL?</h2>
+
+          <div class="definition">
+            <div class="definition-term">Definitie: HTTPS</div>
+            <p><strong>HTTPS</strong> (HyperText Transfer Protocol Secure) is de beveiligde versie van HTTP, het protocol waarmee browsers communiceren met webservers. Het "S" staat voor Secure: de verbinding wordt versleuteld via een <strong>SSL/TLS-certificaat</strong>, zodat data die heen en weer gaat tussen de browser van de bezoeker en jouw server niet door derden kan worden onderschept of gemanipuleerd.</p>
+          </div>
+
+          <p>
+            Een SSL-certificaat (tegenwoordig technisch gezien altijd TLS, maar de term "SSL" is ingeburgerd) functioneert als een digitaal identiteitsbewijs voor je website. Het bewijst aan bezoekers en aan zoekmachines drie dingen: (1) de verbinding is versleuteld, (2) de eigenaar van het certificaat is wie hij zegt te zijn, en (3) de data onderweg wordt niet gemanipuleerd.
+          </p>
+
+          <p>
+            Wanneer een bezoeker jouw HTTPS-website bezoekt, voeren de browser en server een zogenoemde "TLS-handshake" uit. In fracties van een seconde wisselen ze sleutels uit, verifi&#xEB;ren ze elkaars identiteit en zetten ze een versleuteld kanaal op. Alles wat daarna verstuurd wordt — formuliervelden, wachtwoorden, bestelinformatie — is versleuteld en onleesbaar voor buitenstaanders. Bij HTTP gebeurt dit allemaal in gewone, leesbare tekst.
+          </p>
+
+          <!-- SECTIE 2: HTTPS SEO VOORDEEL -->
+
+          <h2 id="https-seo-voordeel">2. HTTPS als Google-rankingfactor</h2>
+
+          <p>
+            In augustus 2014 publiceerde Google een officieel blogbericht: HTTPS wordt een rankingsignaal. In 2026 is het belang hiervan alleen maar gegroeid. Google heeft sindsdien meerdere keren bevestigd dat beveiligde verbindingen zwaarder meewegen in de ranking-algoritmes naarmate het percentage HTTPS-websites stijgt — want naarmate meer websites de overstap maken, valt het achterblijven op HTTP des te meer op.
+          </p>
+
+          <p>
+            Uit analyse van de top 10 Google-resultaten in Nederland blijkt dat meer dan 98% van de pagina's die op positie 1 staan, HTTPS gebruiken. Dat is geen toeval: Google geeft simpelweg de voorkeur aan veilige pagina's. Een website op HTTP competeert met beide handen op de rug gebonden.
+          </p>
+
+          <p>
+            Naast de directe rankingimpact is er een indirecte SEO-invloed via gebruikerssignalen. De "Niet veilig"-melding in browsers verhoogt het bouncepercentage aanzienlijk — mensen verlaten de site sneller. Google interpreteert een hoog bouncepercentage als een signaal dat de pagina niet relevant of betrouwbaar is, wat de ranking verder schaadt. Het is een vicieuze cirkel waarbij &#xE9;&#xE9;n ontbrekend SSL-certificaat meerdere negatieve SEO-effecten tegelijk veroorzaakt.
+          </p>
+
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">van de pagina's op positie 1 in Google gebruikt HTTPS</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">85%</span>
+              <span class="stat-label">van de online shoppers koopt niet bij een onveilige website (Google/Ipsos)</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">+17%</span>
+              <span class="stat-label">hogere conversie gerapporteerd na migratie van HTTP naar HTTPS (gemiddeld)</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">Gratis</span>
+              <span class="stat-label">kosten voor een Let's Encrypt SSL-certificaat via de meeste hostingproviders</span>
+            </div>
+          </div>
+
+          <!-- SECTIE 3: HTTPS CONVERSIE -->
+
+          <h2 id="https-conversie">3. Waarom HTTPS je conversie verbetert</h2>
+
+          <p>
+            De SEO-impact van HTTPS is al overtuigend, maar het effect op conversie is minstens zo belangrijk. Vertrouwen is de basis van elke online transactie — en het slotje in de adresbalk is het meest zichtbare vertrouwenssignaal dat een website kan tonen.
+          </p>
+
+          <p>
+            Onderzoek van Google in samenwerking met Ipsos toont aan dat 85% van de online shoppers een aankoop niet afrondt als ze twijfelen aan de veiligheid van een website. Dat geldt niet alleen voor webshops: ook bezoekers die een contactformulier invullen, een offerte aanvragen of hun e-mailadres achterlaten, zijn terughoudender op een onveilige site. De "Niet veilig"-melding activeert direct een alarmbel, ongeacht hoe professioneel de rest van je website eruitziet.
+          </p>
+
+          <p>
+            Voor formulieren is dit extra kritisch. Wanneer een bezoeker zijn naam, telefoonnummer of e-mailadres invult op een HTTP-pagina, wordt die informatie in leesbare tekst verstuurd over het internet. Moderne browsers waarschuwen hier actief voor: Chrome toont bij het klikken in een formulierveld op een HTTP-pagina expliciet "Verbinding is niet veilig". Dit is de meest directe conversiekiller denkbaar. Het activeren van HTTPS verwijdert deze barrière volledig en geeft bezoekers het vertrouwen dat hun gegevens veilig zijn.
+          </p>
+
+          <!-- SECTIE 4: GRATIS SSL -->
+
+          <h2 id="gratis-ssl-lets-encrypt">4. Gratis SSL via Let's Encrypt en hostingproviders</h2>
+
+          <p>
+            Tien jaar geleden kostte een SSL-certificaat honderden euro's per jaar en vergde het technische kennis om te installeren. In 2026 is het voor de meeste websites volledig gratis en in minder dan vijf minuten geregeld. Dat is grotendeels de verdienste van <strong>Let's Encrypt</strong>.
+          </p>
+
+          <div class="definition">
+            <div class="definition-term">Definitie: Let's Encrypt</div>
+            <p><strong>Let's Encrypt</strong> is een non-profit certificaatautoriteit, opgericht door de Internet Security Research Group (ISRG) en gesteund door grote techbedrijven zoals Google, Mozilla en Cisco. Het geeft gratis, automatisch vernieuwende SSL-certificaten uit die door alle grote browsers worden vertrouwd. Inmiddels beveiligt Let's Encrypt meer dan 300 miljoen websites wereldwijd.</p>
+          </div>
+
+          <p>
+            De meeste Nederlandse hostingproviders hebben Let's Encrypt ge&#xEF;ntegreerd in hun configuratiepaneel. Je hoeft geen technische kennis te hebben: het is letterlijk een klik op een knop. Providers zoals Antagonist, TransIP, Siteground, Kinsta en WPEngine activeren Let's Encrypt zelfs standaard voor elk nieuw domein — je hoeft er niets voor te doen.
+          </p>
+
+          <p>
+            Let's Encrypt-certificaten verlopen na 90 dagen, maar worden in de meeste hostingomgevingen automatisch vernieuwd. Je hoeft dus geen agenda-herinnering in te stellen of jaarlijks te betalen — het systeem beheert zichzelf. Wil je extra zekerheid of geavanceerde functies zoals een Extended Validation (EV)-certificaat met bedrijfsnaam in de adresbalk? Dan zijn er betaalde opties via aanbieders als DigiCert of Sectigo. Voor het MKB biedt Let's Encrypt echter alles wat nodig is.
+          </p>
+
+          <!-- SECTIE 5: SSL INSTELLEN -->
+
+          <h2 id="ssl-instellen">5. Hoe stel je HTTPS in?</h2>
+
+          <p>
+            Het activeren van HTTPS verschilt licht per type hosting. Hier zijn de stappen voor de meest voorkomende situaties:
+          </p>
+
+          <h3>Gedeelde hosting (cPanel / Plesk / DirectAdmin)</h3>
+          <p>
+            Log in op je hostingpaneel en zoek naar de sectie "SSL/TLS" of "Let's Encrypt". Klik op "Certificaat installeren" of "HTTPS inschakelen" en selecteer je domeinnaam. Bij de meeste providers is het in twee stappen geregeld. Na activering is je website binnen enkele minuten bereikbaar via <code>https://</code>. Vergeet daarna niet de 301-redirects in te stellen (zie sectie 6).
+          </p>
+
+          <h3>WordPress</h3>
+          <p>
+            Activeer eerst SSL via je hostingpanel (zie hierboven). Ga daarna in WordPress naar <em>Instellingen &gt; Algemeen</em> en verander de WordPress-adres (URL) en Site-adres van <code>http://</code> naar <code>https://</code>. Installeer vervolgens de gratis plug-in <strong>Really Simple SSL</strong>: deze detecteert je certificaat automatisch, stelt redirects in en lost de meeste mixed content-problemen op met &#xE9;&#xE9;n klik. Meer dan vijf miljoen WordPress-sites gebruiken deze plug-in.
+          </p>
+
+          <h3>Maatwerksites en eigen servers</h3>
+          <p>
+            Voor websites op een eigen VPS of dedicated server kun je Certbot gebruiken — de officiele Let's Encrypt-client. Certbot is beschikbaar voor alle grote besturingssystemen en webservers (Apache, Nginx). Na installatie voer je <code>certbot --apache</code> of <code>certbot --nginx</code> uit, geef je je domeinnaam op en configureert Certbot automatisch je webserver inclusief de automatische omleiding van HTTP naar HTTPS. Certbot regelt ook de automatische vernieuwing via een cronjob.
+          </p>
+
+          <!-- SECTIE 6: REDIRECTS EN MIXED CONTENT -->
+
+          <h2 id="redirects-en-mixed-content">6. 301-redirects instellen en mixed content oplossen</h2>
+
+          <p>
+            HTTPS activeren is stap &#xE9;&#xE9;n. Maar zonder de juiste redirects blijven beide versies van je website bereikbaar — en dat is een probleem voor SEO. Google kan dan duplicate content indexeren (de HTTP- &#xE9;n HTTPS-versie van dezelfde pagina), wat je ranking schaadt.
+          </p>
+
+          <h3>301-redirect van HTTP naar HTTPS</h3>
+          <p>
+            Een 301-redirect stuurt alle HTTP-bezoekers en zoekmachinerobots automatisch door naar de HTTPS-versie. Het is ook het signaal waarmee Google begrijpt dat de HTTPS-versie de definitieve, gewenste versie is. Voor Apache-servers voeg je de volgende regels toe aan je <code>.htaccess</code>-bestand:
+          </p>
+
+          <pre style="background: var(--bg-secondary, #1a1a2e); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 8px; padding: 16px; overflow-x: auto; font-size: 0.85rem; line-height: 1.6;"><code>RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]</code></pre>
+
+          <p>
+            Voor Nginx voeg je dit toe aan je server-configuratieblok:
+          </p>
+
+          <pre style="background: var(--bg-secondary, #1a1a2e); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 8px; padding: 16px; overflow-x: auto; font-size: 0.85rem; line-height: 1.6;"><code>server {
+    listen 80;
+    server_name jouwedomein.nl www.jouwedomein.nl;
+    return 301 https://$host$request_uri;
+}</code></pre>
+
+          <p>
+            WordPress-gebruikers met Really Simple SSL hoeven dit niet handmatig te doen — de plug-in regelt het automatisch.
+          </p>
+
+          <h3>Mixed content oplossen</h3>
+          <p>
+            Mixed content ontstaat wanneer je HTTPS-pagina nog bronnen laadt via <code>http://</code>: afbeeldingen, fonts, JavaScript-bestanden of CSS-bestanden met een onveilige URL. Browsers blokkeren dit en tonen een waarschuwing, waardoor je slotje kan verdwijnen of de site er onveilig uitziet. Ga systematisch te werk: open de browser-DevTools (F12), ga naar het tabblad "Console" en zoek naar waarschuwingen over mixed content. Vervang alle <code>http://</code>-bronnen door <code>https://</code> of gebruik protocol-relatieve URL's (<code>//</code> zonder http of https). In WordPress lost de plug-in Really Simple SSL de meeste gevallen automatisch op.
+          </p>
+
+          <!-- SECTIE 7: SSL CONTROLEREN -->
+
+          <h2 id="ssl-controleren">7. Hoe controleer je of je SSL correct werkt?</h2>
+
+          <p>
+            Na het instellen van HTTPS wil je zeker weten dat alles correct geconfigureerd is. Er zijn twee betrouwbare manieren om dit te controleren:
+          </p>
+
+          <h3>SSL Labs (ssllabs.com)</h3>
+          <p>
+            SSL Labs van Qualys is de industriestandaard voor SSL-configuratietests. Ga naar <strong>ssllabs.com/ssltest/</strong>, voer je domeinnaam in en wacht op het rapport. Je krijgt een score van A+ (perfecte configuratie) tot F (ernstige problemen). Een A of A+ bevestigt dat je SSL veilig en correct is ingesteld. Het rapport toont ook gedetailleerde informatie over je certificaat, versleutelingsprotocollen en bekende kwetsbaarheden. Ideaal voor een technische dieptecheck.
+          </p>
+
+          <h3>Scorio.nl gratis websitescan</h3>
+          <p>
+            Voor een snelle, overzichtelijke check zonder technisch jargon: gebruik de gratis <a href="/#hero-form" style="color: var(--primary-light);">Scorio.nl scan</a>. De scan controleert niet alleen of HTTPS actief is, maar ook of je 301-redirects correct zijn ingesteld, of er mixed content-problemen zijn en of je SSL-certificaat niet bijna verlopen is. Je krijgt een heldere score en concrete actiepunten — in gewone taal, zonder diep in technische rapporten te hoeven duiken.
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Wat het controleert</th>
+                <th>Geschikt voor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Browser adresbalk</strong></td>
+                <td>Slotje zichtbaar, basischeck</td>
+                <td>Snelle visuele check</td>
+              </tr>
+              <tr>
+                <td><strong>SSL Labs</strong></td>
+                <td>Diepgaande configuratietest, score A+&#x2013;F</td>
+                <td>Technische gebruikers</td>
+              </tr>
+              <tr>
+                <td><strong>Scorio.nl scan</strong></td>
+                <td>HTTPS, redirects, mixed content, certificaatstatus</td>
+                <td>MKB-ondernemers zonder technische achtergrond</td>
+              </tr>
+              <tr>
+                <td><strong>Google Search Console</strong></td>
+                <td>Of Google de HTTPS-versie indexeert</td>
+                <td>Bestaande websites</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="callout info">
+            <span class="callout-icon">&#x1F4CB;</span>
+            <div class="callout-body">
+              <div class="callout-title">Controleer ook Google Search Console na de migratie</div>
+              <p class="callout-text">Na de overstap naar HTTPS moet je de HTTPS-versie van je website toevoegen als nieuw eigendom in Google Search Console (als die er nog niet staat). Dien vervolgens je sitemap.xml opnieuw in. Zo zorg je dat Google weet dat de HTTPS-versie de definitieve versie is en die versie indexeert.</p>
+            </div>
+          </div>
+
+          <!-- FAQ -->
+
+          <div class="article-faq">
+            <h2 id="faq">Veelgestelde vragen over HTTPS en SSL</h2>
+
+            <div class="faq-list" style="margin-top: 32px;" role="list">
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Is een SSL-certificaat gratis?
+                  <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                </button>
+                <div class="faq-answer" role="region">
+                  <div class="faq-answer-inner">
+                    Ja, een SSL-certificaat kan volledig gratis zijn. Let's Encrypt is een non-profit certificaatautoriteit die gratis SSL-certificaten uitgeeft die door alle grote browsers worden vertrouwd. De meeste Nederlandse hostingproviders (Antagonist, TransIP, Siteground, Kinsta) activeren Let's Encrypt automatisch of met &#xE9;&#xE9;n klik vanuit het configuratiepaneel. De certificaten verlopen na 90 dagen maar worden automatisch vernieuwd — je hoeft er niets voor te doen.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Wat is het verschil tussen HTTP en HTTPS?
+                  <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                </button>
+                <div class="faq-answer" role="region">
+                  <div class="faq-answer-inner">
+                    HTTP (HyperText Transfer Protocol) verstuurt data tussen browser en server in gewone tekst — leesbaar voor iedereen die het verkeer onderschept, zoals op een openbaar wifi-netwerk. HTTPS (HTTP Secure) versleutelt die verbinding via een SSL/TLS-certificaat. Bezoekers en hun gegevens zijn beschermd tegen afluisteren en manipulatie. Moderne browsers zoals Chrome en Firefox tonen een slotje bij HTTPS en een expliciete "Niet veilig"-waarschuwing bij HTTP. Google rankt HTTPS-websites consequent hoger.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Heeft HTTPS directe invloed op mijn Google-ranking?
+                  <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                </button>
+                <div class="faq-answer" role="region">
+                  <div class="faq-answer-inner">
+                    Ja. Google bevestigde in 2014 dat HTTPS een directe rankingfactor is. In 2026 beschouwt Google een beveiligde verbinding als absolute minimumvereiste. Websites zonder HTTPS krijgen een lagere voorkeur in de zoekresultaten ten opzichte van vergelijkbare HTTPS-sites. Bovendien verhoogt de "Niet veilig"-melding in browsers het bouncepercentage — bezoekers verlaten de site sneller — wat indirect ook de ranking schaadt. HTTPS is daarmee zowel een directe als een indirecte rankingfactor.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Wat is mixed content en hoe los ik het op?
+                  <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                </button>
+                <div class="faq-answer" role="region">
+                  <div class="faq-answer-inner">
+                    Mixed content ontstaat wanneer je HTTPS-pagina bronnen laadt via HTTP — denk aan afbeeldingen, scripts of CSS-bestanden met een <code>http://</code>-URL in plaats van <code>https://</code>. Browsers blokkeren actief content en tonen een waarschuwing, waardoor je slotje verdwijnt. Los het op door alle interne links en bronnen te controleren via browser DevTools (F12 &#x2192; Console) en <code>http://</code>-URL's te vervangen door <code>https://</code>. WordPress-gebruikers kunnen de plug-in Really Simple SSL gebruiken, die dit grotendeels automatisch afhandelt.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CONCLUSIE -->
+
+          <h2 id="conclusie">Conclusie: HTTPS is niet optioneel</h2>
+
+          <p>
+            HTTPS is in 2026 geen nice-to-have maar een absolute basisvereiste voor elke serieuze website. Het be&#xEF;nvloedt je Google-ranking, je conversieratio en het vertrouwen dat bezoekers in jouw bedrijf stellen. Het goede nieuws: dankzij Let's Encrypt is het volledig gratis en bij de meeste providers in enkele minuten geregeld.
+          </p>
+
+          <p>
+            Controleer vandaag nog of jouw website HTTPS heeft. Als dat nog niet zo is, activeer het dan via je hostingpanel, stel 301-redirects in, los mixed content op en verifieer het resultaat via SSL Labs of een gratis Scorio-scan. Het is een eenmalige investering van maximaal een uur die jarenlang rendeert.
+          </p>
+
+          <div class="key-takeaway">
+            <div class="key-takeaway-label">&#x2756; Jouw actielijst voor vandaag:</div>
+            <ul>
+              <li><strong>Check je adresbalk</strong> — ziet jouw website er<code>https://</code> of <code>http://</code>?</li>
+              <li><strong>Doe een gratis scan</strong> via <a href="/#hero-form" style="color: var(--primary-light);">Scorio.nl</a> om HTTPS, redirects en mixed content te controleren</li>
+              <li><strong>Activeer SSL</strong> via je hostingpanel (Let's Encrypt, gratis)</li>
+              <li><strong>Stel 301-redirects</strong> in van HTTP naar HTTPS</li>
+              <li><strong>Verifieer</strong> het resultaat via ssllabs.com &#x2014; mik op een score van A of A+</li>
+            </ul>
+          </div>
+
+          <!-- Author bio -->
+          <div class="author-bio">
+            <div class="author-bio-avatar" aria-hidden="true">SR</div>
+            <div>
+              <div class="author-bio-name">Redactie Scorio.nl</div>
+              <div class="author-bio-role">SEO-experts voor Nederlands MKB</div>
+              <p>Het team achter Scorio.nl bestaat uit Nederlandse SEO-specialisten met samen meer dan 30 jaar ervaring in zoekmachineoptimalisatie voor kleine en middelgrote bedrijven. We schrijven uitsluitend praktische content zonder jargon, specifiek voor de Nederlandse markt.</p>
+            </div>
+          </div>
+
+          <!-- Share buttons -->
+          <div class="share-section">
+            <span class="share-label">Deel dit artikel</span>
+            <button class="share-btn" onclick="navigator.share ? navigator.share({title: document.title, url: location.href}) : null" aria-label="Deel via webshare">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="14" height="14" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185z" /></svg>
+              Delen
+            </button>
+            <a class="share-btn" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.scorio.nl%2Fblog%2Fhttps-ssl-certificaat-seo.html" target="_blank" rel="noopener noreferrer" aria-label="Deel op LinkedIn">
+              LinkedIn
+            </a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.scorio.nl%2Fblog%2Fhttps-ssl-certificaat-seo.html&text=HTTPS+en+SSL+voor+SEO%3A+gratis+en+essentieel" target="_blank" rel="noopener noreferrer" aria-label="Deel op X (Twitter)">
+              X / Twitter
+            </a>
+          </div>
+
+        </article>
+
+        <!-- Sidebar TOC -->
+        <aside class="article-toc" aria-label="Inhoudsopgave">
+          <div class="toc-title">In dit artikel</div>
+          <nav>
+            <ul class="toc-list" id="toc-list">
+              <li><a href="#wat-is-https" class="toc-link">1. Wat is HTTPS en SSL?</a></li>
+              <li><a href="#https-seo-voordeel" class="toc-link">2. HTTPS als rankingfactor</a></li>
+              <li><a href="#https-conversie" class="toc-link">3. HTTPS en je conversie</a></li>
+              <li><a href="#gratis-ssl-lets-encrypt" class="toc-link">4. Gratis SSL via Let's Encrypt</a></li>
+              <li><a href="#ssl-instellen" class="toc-link">5. HTTPS instellen</a></li>
+              <li><a href="#redirects-en-mixed-content" class="toc-link">6. Redirects &amp; mixed content</a></li>
+              <li><a href="#ssl-controleren" class="toc-link">7. SSL controleren</a></li>
+              <li><a href="#faq" class="toc-link">Veelgestelde vragen</a></li>
+              <li><a href="#conclusie" class="toc-link">Conclusie</a></li>
+            </ul>
+          </nav>
+          <div class="toc-divider"></div>
+          <a href="/#hero-form" class="toc-scan-cta">&#x1F50D; Scan jouw website gratis</a>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- Related Articles -->
+    <section class="related-articles">
+      <div class="container">
+        <h2>Gerelateerde artikelen</h2>
+        <div class="blog-grid" style="grid-template-columns: repeat(3, 1fr);">
+
+          <article class="blog-card">
+            <div class="blog-card-img" aria-hidden="true">&#x1F4DA;</div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="badge badge-accent">SEO Basis</span>
+                <span>12 min</span>
+              </div>
+              <h3>De complete SEO-gids voor Nederlands MKB in 2026</h3>
+              <p>Alle vijf pijlers van effectieve SEO uitgelegd, inclusief GEO-optimalisatie voor AI-zoekmachines.</p>
+              <a href="/blog/seo-gids-mkb-ondernemers-2026.html" class="blog-read-more">Lees meer <span>&#x2192;</span></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-img" aria-hidden="true">&#x1F511;</div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="badge badge-accent">SEO Basis</span>
+                <span>10 min</span>
+              </div>
+              <h3>Zoekwoorden kiezen voor je lokale bedrijf</h3>
+              <p>Hoe kies je de juiste zoekwoorden als loodgieter in Rotterdam of kapper in Amsterdam?</p>
+              <a href="/blog/zoekwoorden-kiezen-lokaal-bedrijf.html" class="blog-read-more">Lees meer <span>&#x2192;</span></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-img" aria-hidden="true">&#x26A1;</div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="badge badge-orange">Snelheid</span>
+                <span>8 min</span>
+              </div>
+              <h3>Waarom een trage website je klanten kost</h3>
+              <p>53% van de mobiele bezoekers haakt af als een pagina langer dan 3 seconden laadt.</p>
+              <a href="/blog/" class="blog-read-more">Lees meer <span>&#x2192;</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-banner-inner fade-up">
+          <span class="badge badge-primary" style="margin-bottom: 24px; display: inline-flex;">&#x1F6E1;&#xFE0F; Controleer de beveiliging van jouw website</span>
+          <h2>Scan jouw website nu gratis</h2>
+          <p>In 60 seconden zie je of HTTPS correct werkt, of er mixed content is en welke andere technische issues je SEO blokkeren.</p>
+          <div style="margin-top: 32px;">
+            <a href="/#hero-form" class="btn btn-accent btn-lg">Gratis SEO-scan starten &#x2192;</a>
+          </div>
+          <p class="cta-note" style="margin-top: 16px;">Al 2.847 Nederlandse websites gescand deze maand</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">Scorio<span class="logo-dot"></span></a>
+          <p class="footer-tagline">De slimste SEO scan tool voor Nederlandse ondernemers.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter / X">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/hoe-het-werkt.html">Hoe het werkt</a></li>
+            <li><a href="/prijzen.html">Prijzen</a></li>
+            <li><a href="/#hero-form">Gratis scan</a></li>
+            <li><a href="#">API</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Bedrijf</h4>
+          <ul>
+            <li><a href="#">Over ons</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Affiliate programma</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacybeleid</a></li>
+            <li><a href="#">Algemene voorwaarden</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">AVG</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&#xA9; 2026 Scorio.nl &#x2014; KVK: 12345678 &#x2014; Gemaakt in Nederland &#x1F1F3;&#x1F1F1;</p>
+        <div class="footer-payment">
+          <div class="footer-pay-badge">
+            <svg width="24" height="16" viewBox="0 0 40 26" fill="none" aria-hidden="true"><rect width="40" height="26" rx="4" fill="#CC0066"/><text x="20" y="17" text-anchor="middle" font-size="9" font-weight="900" fill="white" font-family="sans-serif">iDEAL</text></svg>
+            iDEAL
+          </div>
+          <div class="footer-pay-badge">
+            <svg width="24" height="16" viewBox="0 0 40 26" fill="none" aria-hidden="true"><rect width="40" height="26" rx="4" fill="#635BFF"/><text x="20" y="17" text-anchor="middle" font-size="9" font-weight="900" fill="white" font-family="sans-serif">stripe</text></svg>
+            Stripe
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // Reading progress bar
+    (function () {
+      const bar = document.getElementById('reading-progress');
+      const article = document.getElementById('artikel-inhoud');
+      if (!bar || !article) return;
+
+      window.addEventListener('scroll', function () {
+        const articleTop = article.getBoundingClientRect().top + window.scrollY;
+        const articleHeight = article.offsetHeight;
+        const scrolled = window.scrollY - articleTop;
+        const progress = Math.min(Math.max(scrolled / articleHeight, 0), 1);
+        bar.style.width = (progress * 100) + '%';
+      }, { passive: true });
+    })();
+
+    // Active TOC link on scroll
+    (function () {
+      const headings = document.querySelectorAll('.prose h2[id], .prose h3[id], .article-faq h2[id]');
+      const tocLinks = document.querySelectorAll('.toc-link');
+      if (!headings.length || !tocLinks.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute('id');
+              tocLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+              });
+            }
+          });
+        },
+        { rootMargin: '-80px 0px -70% 0px', threshold: 0 }
+      );
+
+      headings.forEach(h => observer.observe(h));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile-first indexering: wat betekent dit voor jouw website? | Scorio.nl</title>
+  <meta name="description" content="Google beoordeelt jouw website primair op de mobiele versie. Leer wat mobile-first indexering is en hoe je ervoor zorgt dat jouw site er klaar voor is." />
+  <link rel="canonical" href="https://www.scorio.nl/blog/mobile-first-indexering.html" />
+  <link rel="alternate" hreflang="nl" href="https://www.scorio.nl/blog/mobile-first-indexering.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Mobile-first indexering: wat betekent dit voor jouw website?" />
+  <meta property="og:description" content="Google beoordeelt jouw website primair op de mobiele versie. Leer wat mobile-first indexering is en hoe je ervoor zorgt dat jouw site er klaar voor is." />
+  <meta property="og:url" content="https://www.scorio.nl/blog/mobile-first-indexering.html" />
+  <meta property="og:site_name" content="Scorio.nl" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:image" content="https://www.scorio.nl/assets/og-mobile-first-indexering.png" />
+  <meta property="article:published_time" content="2026-05-08T08:00:00+02:00" />
+  <meta property="article:modified_time" content="2026-05-08T08:00:00+02:00" />
+  <meta property="article:author" content="https://www.scorio.nl/over-ons" />
+  <meta property="article:section" content="Mobiel" />
+  <meta property="article:tag" content="Mobile-first" />
+  <meta property="article:tag" content="Mobielvriendelijk" />
+  <meta property="article:tag" content="Responsive design" />
+  <meta property="article:tag" content="Google indexering" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mobile-first indexering: wat betekent dit voor jouw website?" />
+  <meta name="twitter:description" content="Google indexeert jouw website primair via de mobiele versie. Leer hoe je ervoor zorgt dat jouw site klaar is." />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://www.scorio.nl/blog/mobile-first-indexering.html#article",
+        "headline": "Mobile-first indexering: wat betekent dit voor jouw website?",
+        "description": "Google beoordeelt jouw website primair op de mobiele versie. Leer wat mobile-first indexering precies inhoudt, welke fouten je moet vermijden en hoe je controleert of jouw site er klaar voor is.",
+        "image": "https://www.scorio.nl/assets/og-mobile-first-indexering.png",
+        "datePublished": "2026-05-08T08:00:00+02:00",
+        "dateModified": "2026-05-08T08:00:00+02:00",
+        "author": {
+          "@type": "Person",
+          "name": "Redactie Scorio.nl",
+          "url": "https://www.scorio.nl/over-ons"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Scorio.nl",
+          "url": "https://www.scorio.nl",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.scorio.nl/assets/scorio-logo.png"
+          }
+        },
+        "inLanguage": "nl",
+        "keywords": ["mobile-first indexering", "mobielvriendelijk", "responsive design", "viewport", "Google mobile", "mobiele SEO", "Core Web Vitals mobiel"],
+        "articleSection": "Mobiel",
+        "wordCount": 1600,
+        "timeRequired": "PT6M",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.scorio.nl/blog/mobile-first-indexering.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.scorio.nl/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.scorio.nl/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Mobile-first indexering: wat betekent dit voor jouw website?", "item": "https://www.scorio.nl/blog/mobile-first-indexering.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wat is mobile-first indexering?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mobile-first indexering betekent dat Google de mobiele versie van een website gebruikt als primaire bron voor het indexeren en rangschikken in de zoekresultaten. Als jouw website geen mobiele versie heeft of de mobiele versie minder content bevat dan de desktopversie, kan dit leiden tot een lagere ranking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoe weet ik of mijn website mobielvriendelijk is?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Je kunt dit testen via Google's Mobile-Friendly Test (search.google.com/test/mobile-friendly), Google Search Console (onder 'Mobiele bruikbaarheid') of de gratis Scorio.nl-scan. Controleer ook zelf: open je website op een smartphone en kijk of tekst leesbaar is zonder in te zoomen, of knoppen groot genoeg zijn om op te tikken en of het menu correct werkt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Heeft mijn website een aparte mobiele versie nodig?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nee. Een aparte mobiele website (m.domein.nl) is niet nodig en zelfs af te raden. Responsive design — waarbij één website automatisch aanpast aan de schermgrootte van het apparaat — is de door Google aanbevolen aanpak. Het is technisch eenvoudiger te onderhouden en voorkomt problemen met duplicate content."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wat zijn de meest gemaakte mobiele fouten?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "De meest gemaakte mobiele fouten zijn: tekst die te klein is om te lezen zonder inzoomen (minder dan 16px), knoppen en links die te dicht op elkaar staan om precies op te tikken, een navigatiemenu dat niet werkt op touchscreen, het gebruik van Flash (niet ondersteund op mobiel) en opdringerige pop-ups of interstitials die het scherm blokkeren."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235B4FE8'/><text x='16' y='22' text-anchor='middle' font-size='16' font-weight='900' fill='white' font-family='sans-serif'>S</text></svg>" />
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Scorio<span class="logo-dot"></span></a>
+        <nav class="nav-links" role="navigation" aria-label="Hoofdmenu">
+          <a href="/hoe-het-werkt.html">Hoe het werkt</a>
+          <a href="/prijzen.html">Prijzen</a>
+          <a href="/blog/" class="active">Blog</a>
+        </nav>
+        <div class="header-actions">
+          <a href="#" class="btn btn-ghost btn-sm">Inloggen</a>
+          <a href="/#hero-form" class="btn btn-accent btn-sm">Gratis scannen</a>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Menu openen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <button class="mobile-close-btn" aria-label="Menu sluiten">✕</button>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Broodkruimelpad">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="/">Home</a></li>
+        <li><span class="breadcrumb-sep" aria-hidden="true">/</span></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><span class="breadcrumb-sep" aria-hidden="true">/</span></li>
+        <li aria-current="page">Mobile-first indexering</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <div class="article-meta">
+          <span class="badge badge-primary">Mobiel</span>
+          <span class="article-meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>
+            <time datetime="2026-05-08">8 mei 2026</time>
+          </span>
+          <span class="article-meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+            6 min lezen
+          </span>
+          <span class="article-meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
+            ~1.600 woorden
+          </span>
+        </div>
+
+        <h1>📱 Mobile-first indexering: wat betekent dit voor jouw website?</h1>
+
+        <p class="article-intro">
+          Meer dan 60% van alle Google-zoekopdrachten in Nederland vindt plaats op een smartphone. Google heeft hierop ingespeeld door zijn indexering volledig om te gooien: de mobiele versie van jouw website is nu de primaire versie die Google gebruikt om je ranking te bepalen. Weet jij of jouw website die test doorstaat?
+        </p>
+
+        <div class="article-author-row">
+          <div class="article-author-avatar" aria-hidden="true">SR</div>
+          <div>
+            <div class="article-author-name">Redactie Scorio.nl</div>
+            <div class="article-author-role">SEO-specialisten voor het Nederlandse MKB</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Layout: article + TOC sidebar -->
+      <div class="article-layout">
+
+        <!-- Main article -->
+        <article class="article-body prose" id="artikel-inhoud" style="max-width: 760px; margin: 0 auto;">
+
+          <!-- INTRODUCTIE -->
+
+          <p style="line-height: 1.7;">
+            Jarenlang was de standaardaanpak om eerst een desktopwebsite te bouwen en die daarna "ook bruikbaar te maken op mobiel". Dat heeft Google definitief veranderd. Sinds 2019 rolt Google de mobile-first indexering uit voor alle websites, en in 2023 is de transitie volledig voltooid: elk nieuw gecrawled domein wordt nu primair beoordeeld op de mobiele versie.
+          </p>
+
+          <p style="line-height: 1.7;">
+            Dit heeft verstrekkende gevolgen. Als jouw desktopsite prachtig is maar de mobiele versie verouderd, traag of moeilijk bruikbaar, dan beoordeelt Google jouw website als zwak — ook al merkt de helft van je klanten daar niets van omdat ze je toevallig via een computer bezocht hebben. De ranking die jij in de zoekmachine krijgt, is de ranking van jouw <em>mobiele versie</em>, punt.
+          </p>
+
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-number">63%</span>
+              <span class="stat-label">van alle Google-zoekopdrachten in Nederland vindt plaats op mobiel (Statista 2025)</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">2019</span>
+              <span class="stat-label">Jaar waarin Google mobile-first indexering standaard maakte voor nieuwe sites</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">61%</span>
+              <span class="stat-label">van gebruikers belt een bedrijf niet terug na een slechte mobiele ervaring (Google)</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">5s</span>
+              <span class="stat-label">Websites die op mobiel 5 seconden laden hebben 70% meer kans op een bounce (Google)</span>
+            </div>
+          </div>
+
+          <p style="line-height: 1.7;">
+            Het goede nieuws: als je website al een modern, responsief design heeft, voldoe je waarschijnlijk aan de basisvereisten. In dit artikel lees je precies wat mobile-first indexering inhoudt, hoe je controleert of jouw site er klaar voor is en welke veelgemaakte fouten je moet vermijden. Gebruik de <a href="/#hero-form" style="color: var(--primary-light);">gratis Scorio.nl-scan</a> om direct je mobiele score te zien.
+          </p>
+
+          <div class="key-takeaway">
+            <div class="key-takeaway-label">✦ In dit artikel leer je:</div>
+            <ul>
+              <li>Wat mobile-first indexering precies is en waarom Google dit deed</li>
+              <li>Een praktische checklist om te beoordelen of jouw site mobielvriendelijk is</li>
+              <li>Hoe de viewport-tag en responsive design werken</li>
+              <li>Waarom mobiele snelheid extra zwaar weegt</li>
+              <li>Welke gratis tools je kunt gebruiken om je mobiele score te testen</li>
+              <li>De 5 meest gemaakte mobiele fouten en hoe je ze vermijdt</li>
+            </ul>
+          </div>
+
+          <!-- SECTIE 1: WAT IS MOBILE-FIRST -->
+
+          <h2 id="wat-is-mobile-first" style="line-height: 1.7;">Uitleg: mobiele versie als primaire index</h2>
+
+          <div class="definition">
+            <div class="definition-term">Definitie: Mobile-first indexering</div>
+            <p style="line-height: 1.7;"><strong>Mobile-first indexering</strong> betekent dat Google's crawler (Googlebot) een website primair bezoekt en beoordeelt via een gesimuleerde mobiele browser. De content, links en gestructureerde data die Google op de mobiele versie aantreft, bepalen hoe de website geïndexeerd en gerangschikt wordt in de zoekresultaten — voor zowel mobiele als desktopzoekopdrachten.</p>
+          </div>
+
+          <p style="line-height: 1.7;">
+            Google schakelde over op mobile-first indexering omdat de realiteit van het internetgebruik dit vereiste. In 2015 passeerde het aantal mobiele zoekopdrachten voor het eerst het aantal desktopzoekopdrachten. Google's traditionele crawler beoordeelde websites altijd vanuit een desktopperspectief, waardoor de beoordeelde kwaliteit niet overeenkwam met de daadwerkelijke gebruikerservaring voor de meerderheid van de zoekers. Dat moest veranderen.
+          </p>
+
+          <p style="line-height: 1.7;">
+            Het praktische gevolg is helder: als de content op jouw mobiele versie afwijkt van de desktopversie — bijvoorbeeld omdat bepaalde teksten, afbeeldingen of secties verborgen zijn op mobiel — dan ziet Google alleen de mobiele versie. Content die alleen op desktop zichtbaar is, telt niet mee voor de indexering. Dit was een pijnpunt voor websites met een aparte mobiele versie die bewust was afgeslankt voor kleinere schermen.
+          </p>
+
+          <div class="callout tip">
+            <span class="callout-icon">💡</span>
+            <div class="callout-body">
+              <div class="callout-title">Responsive design: de aanbevolen aanpak</div>
+              <p class="callout-text">Google adviseert uitdrukkelijk het gebruik van responsive design: één website die zich automatisch aanpast aan elk schermformaat. Dit is technisch eenvoudiger te onderhouden dan een aparte mobiele website (m.domein.nl) en voorkomt problemen met duplicate content en inconsistente indexering.</p>
+            </div>
+          </div>
+
+          <!-- SECTIE 2: CHECKLIST MOBIEL -->
+
+          <h2 id="checklist-mobiel" style="line-height: 1.7;">Checklist: is jouw website mobielvriendelijk?</h2>
+
+          <p style="line-height: 1.7;">
+            Pak je smartphone erbij en open je website. Loop de volgende punten door. Elk punt dat je niet kunt afvinken, is een concrete verbetering die direct invloed heeft op je Google-ranking en de gebruikerservaring van je mobiele bezoekers.
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Controleer</th>
+                <th>Wat je controleert</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Responsive design</strong></td>
+                <td>Past de lay-out zich aan aan de schermgrootte zonder horizontaal scrollen?</td>
+                <td>✅ / ❌</td>
+              </tr>
+              <tr>
+                <td><strong>Leesbare tekst</strong></td>
+                <td>Is de basistekst minimaal 16px groot en leesbaar zonder inzoomen?</td>
+                <td>✅ / ❌</td>
+              </tr>
+              <tr>
+                <td><strong>Klikbare knoppen</strong></td>
+                <td>Zijn knoppen en links minimaal 44×44px groot en makkelijk te tikken?</td>
+                <td>✅ / ❌</td>
+              </tr>
+              <tr>
+                <td><strong>Navigatie werkt</strong></td>
+                <td>Is het hoofdmenu bruikbaar op een touchscreen zonder hover-afhankelijkheid?</td>
+                <td>✅ / ❌</td>
+              </tr>
+              <tr>
+                <td><strong>Geen Flash</strong></td>
+                <td>Gebruikt de site geen Flash-elementen? (niet ondersteund op iOS/Android)</td>
+                <td>✅ / ❌</td>
+              </tr>
+              <tr>
+                <td><strong>Laadtijd mobiel</strong></td>
+                <td>Laadt de pagina binnen 3 seconden op een gemiddelde 4G-verbinding?</td>
+                <td>✅ / ❌</td>
+              </tr>
+              <tr>
+                <td><strong>Viewport-tag aanwezig</strong></td>
+                <td>Staat <code>&lt;meta name="viewport"&gt;</code> in de HTML-head?</td>
+                <td>✅ / ❌</td>
+              </tr>
+              <tr>
+                <td><strong>Geen opdringerige pop-ups</strong></td>
+                <td>Blokkeren pop-ups of interstitials niet het scherm bij het laden van de pagina?</td>
+                <td>✅ / ❌</td>
+              </tr>
+              <tr>
+                <td><strong>Formulieren werken</strong></td>
+                <td>Zijn contactformulieren en invulvelden makkelijk te gebruiken met een touch-toetsenbord?</td>
+                <td>✅ / ❌</td>
+              </tr>
+              <tr>
+                <td><strong>Afbeeldingen schalen</strong></td>
+                <td>Worden afbeeldingen correct geschaald en vallen ze niet buiten de viewport?</td>
+                <td>✅ / ❌</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p style="line-height: 1.7;">
+            Hoe meer punten je kunt afvinken, hoe beter jouw website scoort op mobielvriendelijkheid. Drie of meer rode vlaggen zijn een duidelijk signaal dat je ranking en gebruikerservaring lijden onder de huidige staat van je mobiele versie. Een <a href="/#hero-form" style="color: var(--primary-light);">gratis Scorio-scan</a> controleert deze punten automatisch en geeft je een concreet actieplan.
+          </p>
+
+          <!-- SECTIE 3: VIEWPORT EN RESPONSIVE DESIGN -->
+
+          <h2 id="viewport-en-responsive" style="line-height: 1.7;">Viewport-tag en responsive design uitgelegd</h2>
+
+          <p style="line-height: 1.7;">
+            De <strong>viewport-metatag</strong> is één HTML-regel die browsers vertelt hoe ze de breedte van een webpagina moeten interpreteren op kleine schermen. Zonder deze tag neemt een mobiele browser aan dat de website zo'n 960 pixels breed is (de breedte van een ouderwets desktopscherm) en schaalt die neer op het kleine scherm — waardoor alles piepklein wordt en gebruikers moeten inzoomen om iets te kunnen lezen.
+          </p>
+
+          <p style="line-height: 1.7;">
+            De viewport-tag hoort in de <code>&lt;head&gt;</code> van elke HTML-pagina te staan:
+          </p>
+
+          <pre style="background: var(--border, #2a2a3a); border-radius: 8px; padding: 16px; overflow-x: auto; font-size: 0.9em; line-height: 1.6;"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</code></pre>
+
+          <p style="line-height: 1.7;">
+            <code>width=device-width</code> stelt de viewport-breedte in op de breedte van het apparaatscherm. <code>initial-scale=1.0</code> zorgt dat de pagina niet is ingezoomd bij het laden. Dit is de basisinstelling voor elke responsieve website en een vereiste voor Google's mobielvriendelijkheidsbeoordeling.
+          </p>
+
+          <p style="line-height: 1.7;">
+            <strong>Responsive design</strong> gaat verder dan alleen de viewport-tag. Het is een ontwerpaanpak waarbij de lay-out van een website zich aanpast aan de schermgrootte via CSS media queries. Een typische aanpak is een driekoloms lay-out op desktop die op tablet overgaat naar twee kolommen en op mobiel naar één kolom. Moderne CSS-technieken zoals Flexbox en CSS Grid maken dit eenvoudiger dan ooit — en de meeste populaire CMS-thema's (WordPress, Shopify, Squarespace) zijn tegenwoordig standaard responsief.
+          </p>
+
+          <div class="callout warning">
+            <span class="callout-icon">⚠️</span>
+            <div class="callout-body">
+              <div class="callout-title">Vermijd <code>user-scalable=no</code></div>
+              <p class="callout-text">Sommige websites voegen <code>user-scalable=no</code> toe aan de viewport-tag om inzoomen te blokkeren. Dit is een slechte praktijk: het is schadelijk voor toegankelijkheid (mensen met verminderd zichtvermogen kunnen niet inzoomen) en Google bestraft het als een negatief bruikbaarheidssignaal.</p>
+            </div>
+          </div>
+
+          <!-- SECTIE 4: MOBIELE SNELHEID -->
+
+          <h2 id="mobiele-snelheid" style="line-height: 1.7;">Mobiele snelheid is extra belangrijk</h2>
+
+          <p style="line-height: 1.7;">
+            Op desktop heeft de meeste gebruiker een stabiele breedbandverbinding. Op mobiel is de situatie fundamenteel anders: een 4G-verbinding biedt gemiddeld 30-50 Mbps maar kan in drukke gebieden of bij zwakke ontvangst terugvallen naar 3-5 Mbps. En een deel van jouw bezoekers gebruikt nog steeds 3G of een traag wifi-netwerk in een café of winkelcentrum.
+          </p>
+
+          <p style="line-height: 1.7;">
+            Dat betekent dat jouw website op mobiel sneller moet zijn dan op desktop — juist op het moment dat de verbinding minder stabiel is. Google meet dit ook: de mobiele Core Web Vitals-score is in Google Search Console apart beschikbaar naast de desktop-score, en de mobiele score is leidend voor je ranking. Websites die op desktop snel laden maar op mobiel traag zijn, krijgen een straf op hun organische posities.
+          </p>
+
+          <p style="line-height: 1.7;">
+            De grootste winst voor mobiele snelheid boek je met dezelfde optimalisaties als voor de algemene snelheid: afbeeldingen converteren naar WebP met lazy loading, caching activeren en onnodige scripts verwijderen. Maar er zijn ook mobiel-specifieke aandachtspunten: vermijd grote JavaScript-bibliotheken die zwaar zijn voor minder krachtige processors in middenklasse smartphones, en gebruik geen zware animaties of video's die automatisch afspelen — die combineren slecht met beperkte bandbreedte en geheugen.
+          </p>
+
+          <div class="callout info">
+            <span class="callout-icon">📊</span>
+            <div class="callout-body">
+              <div class="callout-title">Mobiele snelheid testen met echte gebruikerdata</div>
+              <p class="callout-text">Google PageSpeed Insights toont twee soorten data: Lab data (gesimuleerde test) en Field data (echte gebruikerservaringen verzameld via Chrome). Let met name op de Field data — die reflecteert hoe echte bezoekers jouw website ervaren op echte mobiele apparaten met echte verbindingen.</p>
+            </div>
+          </div>
+
+          <!-- SECTIE 5: GOOGLE TEST MOBIEL -->
+
+          <h2 id="google-test-mobiel" style="line-height: 1.7;">Hoe test je of je website mobielvriendelijk is?</h2>
+
+          <p style="line-height: 1.7;">
+            Er zijn meerdere manieren om de mobielvriendelijkheid van je website te controleren, van snelle visuele tests tot gedetailleerde technische analyses. Begin altijd met een handmatige test op je eigen smartphone — dat geeft je het meest realistische beeld van de gebruikerservaring.
+          </p>
+
+          <h3 style="line-height: 1.7;">Google's Mobile-Friendly Test</h3>
+          <p style="line-height: 1.7;">
+            De officiële tool van Google (search.google.com/test/mobile-friendly) analyseert een URL en geeft direct feedback: is de pagina mobielvriendelijk of niet, en zo niet, wat zijn de specifieke problemen? De tool toont ook een schermafdruk van hoe Google de pagina ziet op een mobiel apparaat — dit kan verrassend zijn als je nooit bewust naar die weergave hebt gekeken. De tool is gratis en geeft resultaten binnen 30 seconden.
+          </p>
+
+          <h3 style="line-height: 1.7;">Google Search Console</h3>
+          <p style="line-height: 1.7;">
+            Als je Google Search Console hebt ingesteld voor jouw website (aanbevolen voor elke ondernemer), vind je onder "Ervaring" &gt; "Pagina-ervaring" en "Mobiele bruikbaarheid" een overzicht van alle pagina's met mobiele problemen. Handig: Search Console geeft niet alleen de problemen aan, maar laat ook zien welke pagina's erdoor worden beïnvloed, zodat je prioriteiten kunt stellen.
+          </p>
+
+          <h3 style="line-height: 1.7;">Scorio.nl-scan</h3>
+          <p style="line-height: 1.7;">
+            De <a href="/#hero-form" style="color: var(--primary-light);">gratis Scorio.nl-scan</a> controleert mobielvriendelijkheid als onderdeel van een complete SEO-audit. Je ziet in één overzicht niet alleen je mobiele score, maar ook hoe die samenhangt met je algehele SEO-prestaties: laadtijd, Core Web Vitals, viewport-tag, technische fouten en meer. Ideaal als startpunt als je niet zeker weet waar je moet beginnen.
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Wat je krijgt</th>
+                <th>Gratis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Google Mobile-Friendly Test</strong></td>
+                <td>Directe pass/fail + specifieke problemen + visuele preview</td>
+                <td>Ja</td>
+              </tr>
+              <tr>
+                <td><strong>Google Search Console</strong></td>
+                <td>Overzicht mobiele problemen per pagina + trends</td>
+                <td>Ja</td>
+              </tr>
+              <tr>
+                <td><strong>Google PageSpeed Insights</strong></td>
+                <td>Core Web Vitals mobiel + snelheidsaanbevelingen</td>
+                <td>Ja</td>
+              </tr>
+              <tr>
+                <td><strong>Chrome DevTools</strong></td>
+                <td>Emuleer elk mobiel apparaat direct in je browser</td>
+                <td>Ja</td>
+              </tr>
+              <tr>
+                <td><strong>Scorio.nl scan</strong></td>
+                <td>Mobiel + SEO + snelheid + technisch in één rapport (NL)</td>
+                <td>Ja (basis)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- SECTIE 6: VEELGEMAAKTE FOUTEN MOBIEL -->
+
+          <h2 id="veelgemaakte-fouten-mobiel" style="line-height: 1.7;">Veelgemaakte mobiele fouten</h2>
+
+          <p style="line-height: 1.7;">
+            In de Scorio-scans van Nederlandse MKB-websites komen steeds dezelfde mobiele fouten terug. Dit zijn de vijf meest voorkomende — en hoe je ze oplost.
+          </p>
+
+          <h3 style="line-height: 1.7;">1. Tekst die te klein is om te lezen</h3>
+          <p style="line-height: 1.7;">
+            Tekst kleiner dan 14-16px is op een smartphone nauwelijks leesbaar zonder in te zoomen. Google markeert dit expliciet als een "Small font size"-probleem in de mobiele bruikbaarheidsrapporten. Oplossing: stel een basis lettergrootte in van minimaal 16px in je CSS (<code>body { font-size: 16px; }</code>) en gebruik relatieve eenheden (<code>em</code> of <code>rem</code>) voor alle andere tekstelementen, zodat ze meeschalen.
+          </p>
+
+          <h3 style="line-height: 1.7;">2. Knoppen en links die te dicht op elkaar staan</h3>
+          <p style="line-height: 1.7;">
+            Apple's Human Interface Guidelines adviseren een minimaal tiktarget van 44×44 punten. Knoppen en links die kleiner zijn of te dicht op andere klikbare elementen staan, zijn frustrerende voor gebruikers met grotere vingers of op kleinere schermen. Google noemt dit "Clickable elements too close together". Vergroot knoppen met <code>padding</code> in plaats van het lettertype te vergroten, en zorg voor minstens 8px ruimte tussen klikbare elementen.
+          </p>
+
+          <h3 style="line-height: 1.7;">3. Een navigatiemenu dat niet werkt op touchscreen</h3>
+          <p style="line-height: 1.7;">
+            Desktop-menu's werken vaak via hover-acties: je beweegt de muis over een menuitem en een uitklapmenu verschijnt. Op een touchscreen bestaat hover niet — er is alleen tikken. Als een menu afhankelijk is van hover om submenu's te tonen, werkt het simpelweg niet op mobiel. Vervang hover-afhankelijke navigatie door een hamburger-menu of een click/tap-gebaseerde accordeonnavigatie.
+          </p>
+
+          <h3 style="line-height: 1.7;">4. Gebruik van Flash</h3>
+          <p style="line-height: 1.7;">
+            Adobe Flash is al jaren dood, maar er zijn nog steeds websites die Flash-animaties, Flash-intro's of Flash-gebaseerde formulieren gebruiken. iOS heeft Flash nooit ondersteund; Android verwijderde de ondersteuning in 2012. Als jouw website Flash gebruikt, is die content onzichtbaar voor alle mobiele bezoekers én voor Google. Vervang Flash-elementen door HTML5-alternatieven, CSS-animaties of moderne videospelers.
+          </p>
+
+          <h3 style="line-height: 1.7;">5. Opdringerige pop-ups en interstitials</h3>
+          <p style="line-height: 1.7;">
+            Google bestraft websites die pop-ups of interstitials tonen die het grootste deel van het scherm blokkeren direct bij het laden van de pagina op mobiel. Dit geldt met name voor nieuwsbriefinschrijvingen, cookie-banners die het hele scherm innemen en aanbiedingen die je moet wegklikken voordat je de content kunt lezen. Uitzondering: wettelijk verplichte berichten (leeftijdsverificatie, AVG cookie-consent) zijn toegestaan. Houd cookie-banners klein en onderin het scherm.
+          </p>
+
+          <!-- FAQ -->
+
+          <div class="article-faq">
+            <h2 id="faq">Veelgestelde vragen over mobile-first indexering</h2>
+
+            <div class="faq-list" style="margin-top: 32px;" role="list">
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Wat is mobile-first indexering?
+                  <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                </button>
+                <div class="faq-answer" role="region">
+                  <div class="faq-answer-inner">
+                    Mobile-first indexering betekent dat Google de mobiele versie van een website gebruikt als primaire bron voor het indexeren en rangschikken in de zoekresultaten. Als jouw website geen mobiele versie heeft of de mobiele versie minder content bevat dan de desktopversie, kan dit leiden tot een lagere ranking — ook voor gebruikers die via een desktop zoeken. Google deed dit omdat meer dan 60% van alle zoekopdrachten wereldwijd via een mobiel apparaat plaatsvindt.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Hoe weet ik of mijn website mobielvriendelijk is?
+                  <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                </button>
+                <div class="faq-answer" role="region">
+                  <div class="faq-answer-inner">
+                    Je kunt dit testen via Google's Mobile-Friendly Test (search.google.com/test/mobile-friendly), Google Search Console (onder "Mobiele bruikbaarheid") of de gratis <a href="/#hero-form" style="color: var(--primary-light);">Scorio.nl-scan</a>. Doe ook een handmatige test: open je website op je eigen smartphone en controleer of tekst leesbaar is zonder inzoomen, of knoppen makkelijk aan te tikken zijn en of het menu correct werkt. Dat geeft je het meest realistische beeld van de gebruikerservaring.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Heeft mijn website een aparte mobiele versie nodig?
+                  <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                </button>
+                <div class="faq-answer" role="region">
+                  <div class="faq-answer-inner">
+                    Nee. Een aparte mobiele website (m.domein.nl) is niet nodig en zelfs af te raden vanwege de extra onderhoudslast en het risico op duplicate content. Google adviseert uitdrukkelijk responsive design: één website die zich automatisch aanpast aan de schermgrootte van het apparaat via CSS media queries. Dit is technisch eenvoudiger te onderhouden en voorkomt problemen waarbij de mobiele versie andere of minder content heeft dan de desktopversie.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                  Wat zijn de meest gemaakte mobiele fouten?
+                  <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                </button>
+                <div class="faq-answer" role="region">
+                  <div class="faq-answer-inner">
+                    De meest gemaakte mobiele fouten zijn: (1) tekst die te klein is om zonder inzoomen te lezen (onder de 16px), (2) knoppen en links die te dicht op elkaar staan om precies op te tikken, (3) een navigatiemenu dat afhankelijk is van hover-interacties en dus niet werkt op touchscreen, (4) het gebruik van Flash (dat op geen enkel modern mobiel apparaat wordt ondersteund) en (5) grote pop-ups of interstitials die het scherm blokkeren bij het laden van de pagina. Google bestraft al deze punten expliciet als negatieve gebruikerssignalen.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CONCLUSIE -->
+
+          <h2 id="conclusie" style="line-height: 1.7;">Conclusie: mobiel is geen optie, het is de standaard</h2>
+
+          <p style="line-height: 1.7;">
+            Mobile-first indexering is geen tijdelijke trend — het is de permanente realiteit van het moderne internet. Google heeft dit al jaren geleden beslist en alle websites zijn inmiddels volledig overgegaan op mobile-first beoordeling. Wie zijn mobiele website verwaarloosd, verliest rankings, bezoekers en klanten.
+          </p>
+
+          <p style="line-height: 1.7;">
+            Het goede nieuws: de meeste moderne websites en CMS-thema's zijn al standaard responsief. Als je website in de afgelopen vijf jaar is gebouwd of vernieuwd, voldoe je waarschijnlijk al aan de basisvereisten. Maar "voldoen aan de basis" en "uitstekend scoren op mobiel" zijn twee verschillende dingen. De details maken het verschil: leesbare lettergrootte, tikbare knoppen, een werkend menu, geen Flash, snelle laadtijden en geen opdringerige pop-ups.
+          </p>
+
+          <div class="key-takeaway">
+            <div class="key-takeaway-label">✦ Jouw 3 acties voor vandaag:</div>
+            <ul>
+              <li><strong>Open je website op je smartphone</strong> en loop de 10-punten checklist door in dit artikel</li>
+              <li><strong>Test via Google's Mobile-Friendly Test</strong> (search.google.com/test/mobile-friendly) — gratis in 30 seconden</li>
+              <li><strong>Voer een <a href="/#hero-form" style="color: var(--primary-light);">Scorio-scan</a> uit</strong> voor een compleet beeld van je mobiele én SEO-score</li>
+            </ul>
+          </div>
+
+          <!-- Author bio -->
+          <div class="author-bio">
+            <div class="author-bio-avatar" aria-hidden="true">SR</div>
+            <div>
+              <div class="author-bio-name">Redactie Scorio.nl</div>
+              <div class="author-bio-role">SEO-experts voor Nederlands MKB</div>
+              <p style="line-height: 1.7;">Het team achter Scorio.nl bestaat uit Nederlandse SEO-specialisten met samen meer dan 30 jaar ervaring in zoekmachineoptimalisatie voor kleine en middelgrote bedrijven. We schrijven uitsluitend praktische content zonder jargon, specifiek voor de Nederlandse markt.</p>
+            </div>
+          </div>
+
+          <!-- Share buttons -->
+          <div class="share-section">
+            <span class="share-label">Deel dit artikel</span>
+            <button class="share-btn" onclick="navigator.share ? navigator.share({title: document.title, url: location.href}) : null" aria-label="Deel via webshare">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="14" height="14" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185z" /></svg>
+              Delen
+            </button>
+            <a class="share-btn" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.scorio.nl%2Fblog%2Fmobile-first-indexering.html" target="_blank" rel="noopener noreferrer" aria-label="Deel op LinkedIn">
+              LinkedIn
+            </a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.scorio.nl%2Fblog%2Fmobile-first-indexering.html&text=Mobile-first+indexering%3A+wat+betekent+dit+voor+jouw+website%3F" target="_blank" rel="noopener noreferrer" aria-label="Deel op X (Twitter)">
+              X / Twitter
+            </a>
+          </div>
+
+        </article>
+
+        <!-- Sidebar TOC -->
+        <aside class="article-toc" aria-label="Inhoudsopgave">
+          <div class="toc-title">In dit artikel</div>
+          <nav>
+            <ul class="toc-list" id="toc-list">
+              <li><a href="#wat-is-mobile-first" class="toc-link">Wat is mobile-first?</a></li>
+              <li><a href="#checklist-mobiel" class="toc-link">Checklist mobielvriendelijk</a></li>
+              <li><a href="#viewport-en-responsive" class="toc-link">Viewport &amp; responsive design</a></li>
+              <li><a href="#mobiele-snelheid" class="toc-link">Mobiele snelheid</a></li>
+              <li><a href="#google-test-mobiel" class="toc-link">Tools om te testen</a></li>
+              <li><a href="#veelgemaakte-fouten-mobiel" class="toc-link">Veelgemaakte fouten</a></li>
+              <li><a href="#faq" class="toc-link">Veelgestelde vragen</a></li>
+              <li><a href="#conclusie" class="toc-link">Conclusie</a></li>
+            </ul>
+          </nav>
+          <div class="toc-divider"></div>
+          <a href="/#hero-form" class="toc-scan-cta">🔍 Scan jouw website gratis</a>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- Related Articles -->
+    <section class="related-articles">
+      <div class="container">
+        <h2>Gerelateerde artikelen</h2>
+        <div class="blog-grid" style="grid-template-columns: repeat(3, 1fr);">
+
+          <article class="blog-card">
+            <div class="blog-card-img" aria-hidden="true">⚡</div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="badge badge-orange">Snelheid</span>
+                <span>8 min</span>
+              </div>
+              <h3>Waarom een trage website je klanten kost</h3>
+              <p>53% van mobiele bezoekers haakt af bij meer dan 3 seconden laadtijd. Leer hoe je dit oplost.</p>
+              <a href="/blog/trage-website-klanten-kosten.html" class="blog-read-more">Lees meer <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-img" aria-hidden="true">🔍</div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="badge badge-accent">SEO Basis</span>
+                <span>12 min</span>
+              </div>
+              <h3>De Complete SEO-Gids voor Nederlands MKB in 2026</h3>
+              <p>Alles over SEO voor Nederlandse MKB-ondernemers: de 5 pijlers, een 7-stappenplan en GEO-optimalisatie.</p>
+              <a href="/blog/seo-gids-mkb-ondernemers-2026.html" class="blog-read-more">Lees meer <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-img" aria-hidden="true">📝</div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="badge badge-accent">Blog</span>
+                <span>Alle artikelen</span>
+              </div>
+              <h3>Meer SEO-tips voor jouw website</h3>
+              <p>Bekijk alle artikelen over SEO, snelheid, mobiel en technische optimalisatie voor het Nederlandse MKB.</p>
+              <a href="/blog/" class="blog-read-more">Naar het blog <span>→</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-banner-inner fade-up">
+          <span class="badge badge-accent" style="margin-bottom: 24px; display: inline-flex;">📱 Is jouw website klaar voor mobiel?</span>
+          <h2>Scan jouw website gratis</h2>
+          <p>In 60 seconden zie je je mobiele score, laadtijd en alle verbeterpunten. Geen account, geen creditcard nodig.</p>
+          <div style="margin-top: 32px;">
+            <a href="/#hero-form" class="btn btn-accent btn-lg">Gratis mobiele scan starten →</a>
+          </div>
+          <p class="cta-note" style="margin-top: 16px;">Al 2.847 Nederlandse websites gescand deze maand</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">Scorio<span class="logo-dot"></span></a>
+          <p class="footer-tagline">De slimste SEO scan tool voor Nederlandse ondernemers.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter / X">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/hoe-het-werkt.html">Hoe het werkt</a></li>
+            <li><a href="/prijzen.html">Prijzen</a></li>
+            <li><a href="/#hero-form">Gratis scan</a></li>
+            <li><a href="#">API</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Bedrijf</h4>
+          <ul>
+            <li><a href="#">Over ons</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Affiliate programma</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacybeleid</a></li>
+            <li><a href="#">Algemene voorwaarden</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">AVG</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Scorio.nl — KVK: 12345678 — Gemaakt in Nederland 🇳🇱</p>
+        <div class="footer-payment">
+          <div class="footer-pay-badge">
+            <svg width="24" height="16" viewBox="0 0 40 26" fill="none" aria-hidden="true"><rect width="40" height="26" rx="4" fill="#CC0066"/><text x="20" y="17" text-anchor="middle" font-size="9" font-weight="900" fill="white" font-family="sans-serif">iDEAL</text></svg>
+            iDEAL
+          </div>
+          <div class="footer-pay-badge">
+            <svg width="24" height="16" viewBox="0 0 40 26" fill="none" aria-hidden="true"><rect width="40" height="26" rx="4" fill="#635BFF"/><text x="20" y="17" text-anchor="middle" font-size="9" font-weight="900" fill="white" font-family="sans-serif">stripe</text></svg>
+            Stripe
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // Reading progress bar
+    (function () {
+      const bar = document.getElementById('reading-progress');
+      const article = document.getElementById('artikel-inhoud');
+      if (!bar || !article) return;
+
+      window.addEventListener('scroll', function () {
+        const articleTop = article.getBoundingClientRect().top + window.scrollY;
+        const articleHeight = article.offsetHeight;
+        const scrolled = window.scrollY - articleTop;
+        const progress = Math.min(Math.max(scrolled / articleHeight, 0), 1);
+        bar.style.width = (progress * 100) + '%';
+      }, { passive: true });
+    })();
+
+    // Active TOC link on scroll
+    (function () {
+      const headings = document.querySelectorAll('.prose h2[id], .prose h3[id], .article-faq h2[id]');
+      const tocLinks = document.querySelectorAll('.toc-link');
+      if (!headings.length || !tocLinks.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute('id');
+              tocLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+              });
+            }
+          });
+        },
+        { rootMargin: '-80px 0px -70% 0px', threshold: 0 }
+      );
+
+      headings.forEach(h => observer.observe(h));
+    })();
+  </script>
+</body>
+</html>
