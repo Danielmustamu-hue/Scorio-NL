@@ -123,4 +123,76 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-nijmegen/"/>
   </url>
 
+  <!-- Branche landingspagina's -->
+  <url>
+    <loc>https://www.scorio.nl/seo-check-kapper/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-kapper/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/seo-check-restaurant/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-restaurant/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/seo-check-loodgieter/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-loodgieter/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/seo-check-tandarts/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-tandarts/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/seo-check-webshop/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-webshop/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/seo-check-makelaar/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-makelaar/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/seo-check-fysiotherapeut/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-fysiotherapeut/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/seo-check-accountant/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-accountant/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/seo-check-schilder/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-schilder/"/>
+  </url>
+  <url>
+    <loc>https://www.scorio.nl/seo-check-installateur/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-installateur/"/>
+  </url>
+
 </urlset>
