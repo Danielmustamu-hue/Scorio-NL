@@ -272,6 +272,46 @@
   });
 
   /* ----------------------------------------------------------
+     Stat counters — "Waarom SEO" sectie
+  ---------------------------------------------------------- */
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1600;
+    const startTime = performance.now();
+
+    const tick = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(ease * target) + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+
+    requestAnimationFrame(tick);
+  }
+
+  const counterEls = document.querySelectorAll('.why-stat-number[data-target]');
+  if (counterEls.length && 'IntersectionObserver' in window) {
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+    counterEls.forEach(el => counterObserver.observe(el));
+  } else {
+    counterEls.forEach(el => {
+      el.textContent = el.dataset.target + (el.dataset.suffix || '');
+    });
+  }
+
+  /* ----------------------------------------------------------
      Active nav highlighting
   ---------------------------------------------------------- */
   const navLinks = document.querySelectorAll('.nav-links a[href]');
