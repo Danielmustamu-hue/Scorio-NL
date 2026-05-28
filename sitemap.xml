@@ -42,4 +42,85 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/blog/seo-gids-mkb-ondernemers-2026.html"/>
   </url>
 
+  <!-- Stad landingspagina's -->
+  <url>
+    <loc>https://www.scorio.nl/seo-check-amsterdam/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-amsterdam/"/>
+  </url>
+
+  <url>
+    <loc>https://www.scorio.nl/seo-check-rotterdam/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-rotterdam/"/>
+  </url>
+
+  <url>
+    <loc>https://www.scorio.nl/seo-check-utrecht/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-utrecht/"/>
+  </url>
+
+  <url>
+    <loc>https://www.scorio.nl/seo-check-den-haag/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-den-haag/"/>
+  </url>
+
+  <url>
+    <loc>https://www.scorio.nl/seo-check-eindhoven/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-eindhoven/"/>
+  </url>
+
+  <url>
+    <loc>https://www.scorio.nl/seo-check-groningen/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-groningen/"/>
+  </url>
+
+  <url>
+    <loc>https://www.scorio.nl/seo-check-tilburg/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-tilburg/"/>
+  </url>
+
+  <url>
+    <loc>https://www.scorio.nl/seo-check-almere/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-almere/"/>
+  </url>
+
+  <url>
+    <loc>https://www.scorio.nl/seo-check-breda/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-breda/"/>
+  </url>
+
+  <url>
+    <loc>https://www.scorio.nl/seo-check-nijmegen/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/seo-check-nijmegen/"/>
+  </url>
+
 </urlset>
