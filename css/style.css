@@ -2988,7 +2988,7 @@ p { color: var(--muted); line-height: 1.7; }
 }
 
 .popular-questions {
-  padding: 64px 0;
+  padding: 40px 0;
   background: rgba(255,255,255,0.015);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -3215,8 +3215,8 @@ p { color: var(--muted); line-height: 1.7; }
   display: block;
   position: relative;
   background: linear-gradient(135deg, var(--primary) 0%, #3B2FCC 100%);
-  border-radius: 20px;
-  padding: 52px 56px;
+  border-radius: 16px;
+  padding: 40px 48px;
   overflow: hidden;
   text-decoration: none;
   color: var(--text);
@@ -3230,12 +3230,12 @@ p { color: var(--muted); line-height: 1.7; }
 
 .featured-article-deco {
   position: absolute;
-  right: 40px;
+  right: 32px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 148px;
+  font-size: 120px;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.07);
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -3266,11 +3266,12 @@ p { color: var(--muted); line-height: 1.7; }
 }
 
 .featured-article-content h2 {
-  font-size: 1.85rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
   font-weight: 800;
   line-height: 1.25;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   color: #fff;
+  letter-spacing: -0.02em;
 }
 
 .featured-article-content p {
@@ -3352,6 +3353,22 @@ p { color: var(--muted); line-height: 1.7; }
   margin-bottom: 8px;
 }
 
+.blog-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.blog-card-body p {
+  font-size: 0.825rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
 /* ============================================================
    Blog Index — Category Filter Bar
    ============================================================ */
@@ -3410,16 +3427,12 @@ p { color: var(--muted); line-height: 1.7; }
 
 @media (max-width: 640px) {
   .featured-article-card {
-    padding: 32px 28px;
-  }
-
-  .featured-article-content h2 {
-    font-size: 1.4rem;
+    padding: 28px 24px;
   }
 
   .featured-article-deco {
-    font-size: 100px;
-    opacity: 0.5;
+    font-size: 80px;
+    right: 12px;
   }
 
   .pq-accordion-answer-inner {
