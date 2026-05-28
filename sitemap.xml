@@ -255,4 +255,13 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/avg/"/>
   </url>
 
+  <!-- Rapport -->
+  <url>
+    <loc>https://www.scorio.nl/rapport/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.scorio.nl/rapport/"/>
+  </url>
+
 </urlset>
