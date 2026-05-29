@@ -1913,12 +1913,12 @@ p { color: var(--muted); line-height: 1.7; }
 }
 
 .blog-card-img {
-  height: 180px;
+  height: 160px;
   background: linear-gradient(135deg, rgba(91,79,232,0.3), rgba(0,200,150,0.2));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 0;
 }
 
 .blog-card-body {
@@ -3130,3 +3130,51 @@ p { color: var(--muted); line-height: 1.7; }
 @media (max-width: 600px) {
   .cookie-banner-inner { flex-direction: column; align-items: flex-start; }
 }
+
+
+/* ============================================================
+   BLOG CARD SVG ILLUSTRATIES
+   ============================================================ */
+.blog-card-img svg {
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.35));
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-card-img svg {
+  transform: scale(1.06) translateY(-3px);
+}
+
+/* Article hero banner */
+.article-hero-banner {
+  width: 100%;
+  height: 280px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px 0 40px;
+  overflow: hidden;
+}
+
+.article-hero-banner svg {
+  animation: heroFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 8px 32px rgba(0,0,0,0.5));
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@media (max-width: 600px) {
+  .article-hero-banner { height: 200px; }
+  .article-hero-banner svg { width: 80%; height: auto; }
+}
+
+@media print {
+  .article-hero-banner { height: 180px; page-break-inside: avoid; }
+  .article-hero-banner svg { animation: none; }
+  .blog-card-img { height: 120px; }
+}
+
